@@ -5,6 +5,13 @@ package day04;
  */
 public class ForDemo {
     public static void main(String[] args) {
+        //透過程序計算1+2+3+.......+98+99+100的計算結果
+        int sum = 0;
+        for (int i = 1; i <= 100; i++) {
+            sum += i;
+        }
+        System.out.println("sum=" + sum);
+
         //輸出五次"行動是成功的階梯"
         for (int i = 0; i < 5; i++) {
             System.out.println("行動是成功的階梯");
@@ -13,7 +20,7 @@ public class ForDemo {
 
         //輸出九九乘法表
         for (int m = 1; m <= 9; m++) {
-            for (int n = 1; n <= 9; n++) {
+            for (int n = 1; n <= 9; n += 1) {//此處n++相當於n=n+1故也可寫作n+=1
                 System.out.println(m + "x" + n + "=" + m * n);
             }
         }
@@ -22,5 +29,6 @@ public class ForDemo {
          */
         //System.out.println(m);//超出變量m的作用域
         //System.out.println(n);//超出變量n的作用域
+
     }
 }
