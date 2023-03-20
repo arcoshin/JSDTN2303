@@ -1,6 +1,6 @@
 package day02;
 
-public class HomeWork {
+public class Homework {
     public static void main(String[] args) {
         int a;
         a = 5;

@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Guessing {
     public static void main(String[] args) {
 
-        //goal:用戶要猜的目標數(0~100)
+        //goal:用戶要猜的目標數(0~1000)
         int goal = (int) (Math.random() * 1000 + 1);
         System.out.println(goal);
 
@@ -50,18 +50,7 @@ public class Guessing {
          */
 
         //提示系統(使用 do...while)
-        //注意此處只能使用if...else if結構，否則第一次就猜中會走else分支
-        do {//代入
-            if (user > goal) {
-                System.out.println("你猜得太大了，再猜吧!!");
-            } else if (user < goal) {
-                System.out.println("你猜得太小了，再猜吧!!");
-            } else {
-                break;
-            }
-            user = scanner.nextInt();
-        } while (user != goal);
-        System.out.println("恭喜你猜對了!!遊戲結束!!");
+
 
     }
 }
