@@ -1,9 +1,12 @@
+package day04;
+
 import java.util.Scanner;
 
 /**
+ * day04
  * switch...case結構、循環結構的練習
  */
-public class Homework {
+public class HomeworkChecker {
     /**
      * 結束的方法
      */
@@ -78,25 +81,25 @@ public class Homework {
         /**
          * 作業查找分支系統
          */
-            switch (homeworkCheck) {
-                case 1:
-                    question1();
-                    break;
-                case 2:
-                    question2();
-                    break;
-                case 3:
-                    question3();
-                    break;
-                case 4:
-                    question4();
-                    break;
-                case 99:
-                    return;
-                default:
-                    uRWrong();
-                    homeworkChecker();
-            }
+        switch (homeworkCheck) {
+            case 1:
+                question1();
+                break;
+            case 2:
+                question2();
+                break;
+            case 3:
+                question3();
+                break;
+            case 4:
+                question4();
+                break;
+            case 99:
+                return;
+            default:
+                uRWrong();
+                homeworkChecker();
+        }
     }
 
     /**
