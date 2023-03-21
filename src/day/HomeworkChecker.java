@@ -88,13 +88,13 @@ public class HomeworkChecker {
         Scanner scanner = new Scanner(System.in);
         int homeworkCheck;
         System.out.println("======================================================================");
-        System.out.println("Hint : 請輸入要檢查的題數(如第一題請輸入1，本次作業共4題，若想結束檢查請輸入99)");
+        System.out.println("Hint : 請輸入要檢查的題數(如第一題請輸入1，本次作業共5題，若想結束檢查請輸入99)");
         System.out.println("======================================================================");
-        System.out.println("1. Addition隨機加法運算器: 要求：由系統隨機出10道加法題，而後由用戶來答題，答題後輸出\"答對了\"或\"答錯了\"，答對1題得10分，答錯1題不扣分，最後輸出總分數。");
-        System.out.println("2. MultiTable九九乘法表： 要求：輸出九九乘法表");
-        System.out.println("3. 數組小代碼練習：聲明、初始化、訪問、遍歷");
-        System.out.println("4. MaxOfArray求數組元素最大值");
-        System.out.println("5. 對數組進行升序排列，並輸出排序後的結果");
+        System.out.println("1. ");
+        System.out.println("2. ");
+        System.out.println("3. ");
+        System.out.println("4. ");
+        System.out.println("5. ");//記得修改最大題數
         homeworkCheck = scanner.nextInt();
 
         /**
@@ -122,7 +122,6 @@ public class HomeworkChecker {
                 question5();
                 break;
             case 99:
-                whatYouChoose("");
                 return;
             default:
                 uRWrong();
