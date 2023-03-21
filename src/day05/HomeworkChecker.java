@@ -65,13 +65,6 @@ public class HomeworkChecker {
     }
 
     /**
-     * 說明模擬業務完成的方法
-     */
-    private static void missionComplete() {
-        System.out.println("業務執行完畢，請選擇下個業務");
-    }
-
-    /**
      * 廣播說明客戶所選擇的業務
      */
     private static void whatYouChoose(String doSomething) {
@@ -88,7 +81,7 @@ public class HomeworkChecker {
         Scanner scanner = new Scanner(System.in);
         int homeworkCheck;
         System.out.println("======================================================================");
-        System.out.println("Hint : 請輸入要檢查的題數(如第一題請輸入1，本次作業共4題，若想結束檢查請輸入99)");
+        System.out.println("Hint : 請輸入要檢查的題數(如第一題請輸入1，本次作業共5題，若想結束檢查請輸入99)");
         System.out.println("======================================================================");
         System.out.println("1. Addition隨機加法運算器: 要求：由系統隨機出10道加法題，而後由用戶來答題，答題後輸出\"答對了\"或\"答錯了\"，答對1題得10分，答錯1題不扣分，最後輸出總分數。");
         System.out.println("2. MultiTable九九乘法表： 要求：輸出九九乘法表");
@@ -122,7 +115,6 @@ public class HomeworkChecker {
                 question5();
                 break;
             case 99:
-                whatYouChoose("");
                 return;
             default:
                 uRWrong();
@@ -134,6 +126,8 @@ public class HomeworkChecker {
      * 第一題演示
      */
     private static void question1() throws InterruptedException {
+        System.out.println("正在生成題目......");
+        Thread.sleep(2000);
 
         //生成隨機數對象及計分對象
         Random random = new Random();
@@ -166,6 +160,8 @@ public class HomeworkChecker {
         //答題結果
         System.out.println("=====測驗結束=====");
         System.out.println("您的測驗總分為: " + score + "分");
+
+
         backToMenu();
     }
 
@@ -192,6 +188,7 @@ public class HomeworkChecker {
      */
     private static void question3() throws InterruptedException {
         System.out.println("正在產生數組練習代碼成果......");
+        Thread.sleep(2000);
         //背景代碼存放區起始===============================
 
         //聲明
@@ -283,6 +280,7 @@ public class HomeworkChecker {
      */
     private static void question4() throws InterruptedException {
         System.out.println("正在展示MaxOfArray求數組最大值相關語法......");
+        Thread.sleep(2000);
         //============================================================================
         System.out.println("//聲明一個int類型數組名為arr，並開闢10個空間");
         System.out.println();//排版裝飾用
