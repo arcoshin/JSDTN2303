@@ -1,6 +1,7 @@
 package day06;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * 求數組最大值，並將其儲存到數組最後一個元素的下一個位置(擴容)
