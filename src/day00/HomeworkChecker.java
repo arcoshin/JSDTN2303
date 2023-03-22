@@ -9,6 +9,15 @@ import java.util.Scanner;
  * 的作業類
  */
 public class HomeworkChecker {
+
+    /**
+     * 開場的方法
+     */
+    private static void welcome() throws InterruptedException {
+        System.out.println("請稍後...正在為您生成演示過程...");
+        Thread.sleep(1000);
+    }
+
     /**
      * 結束的方法
      */
@@ -133,7 +142,10 @@ public class HomeworkChecker {
      * 第一題演示
      */
     private static void question1() throws InterruptedException {
+        welcome();
+        //=======================================================
 
+        //=======================================================
         backToMenu();
     }
 
@@ -141,7 +153,10 @@ public class HomeworkChecker {
      * 第二題演示
      */
     private static void question2() throws InterruptedException {
+        welcome();
+        //=======================================================
 
+        //=======================================================
         backToMenu();
     }
 
@@ -149,7 +164,10 @@ public class HomeworkChecker {
      * 第三題演示
      */
     private static void question3() throws InterruptedException {
+        welcome();
+        //=======================================================
 
+        //=======================================================
         backToMenu();
     }
 
@@ -157,7 +175,10 @@ public class HomeworkChecker {
      * 第四題演示
      */
     private static void question4() throws InterruptedException {
+        welcome();
+        //=======================================================
 
+        //=======================================================
         backToMenu();
     }
 
@@ -165,7 +186,10 @@ public class HomeworkChecker {
      * 第五題演示
      */
     private static void question5() throws InterruptedException {
+        welcome();
+        //=======================================================
 
+        //=======================================================
         backToMenu();
     }
 

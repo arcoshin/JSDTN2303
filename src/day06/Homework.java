@@ -5,6 +5,16 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Homework {
+    /**
+     * Test
+     */
+    public static void test1() {
+        System.out.println("test1 OK!");
+    }
+    public void test2() {
+        System.out.println("test2 OK!");
+    }
+
     public static void main(String[] args) {
         System.out.println("=================");
         System.out.println("1.MaxOfArray");
