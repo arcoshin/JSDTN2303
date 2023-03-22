@@ -1,9 +1,9 @@
-package day05;
+package day06;
 
 import java.util.Arrays;
 
 /**
- * 求數組最大值
+ * 求數組最大值，並將其儲存到數組最後一個元素的下一個位置(擴容)
  */
 public class MaxOfArrayDemo {
     public static void main(String[] args) {
@@ -38,6 +38,9 @@ public class MaxOfArrayDemo {
         }
         System.out.println("最小值為:" + min);//取出最小值
 
+        arr = Arrays.copyOf(arr, arr.length + 1);//擴容
+        arr[arr.length - 1] = max;//將最大值賦值到最後一個元素
+        System.out.println("擴容後:" + Arrays.toString(arr));
 
 
     }
