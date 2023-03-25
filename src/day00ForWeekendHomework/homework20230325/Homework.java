@@ -1,9 +1,6 @@
 package day00ForWeekendHomework.homework20230325;
 
-
-import java.util.*;
-
-public class Homework {
+class Homework {
     public static void main(String[] args) {
         /**====================
          * 1.CommandBySwitch

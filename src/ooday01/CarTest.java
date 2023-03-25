@@ -3,7 +3,7 @@ package ooday01;
 /**
  * Car類測試類
  */
-public class CarTest {
+class CarTest {
     public static void main(String[] args) {
         Car car1 = new Car("TOYOTA","白",1000000);
         car1.stop();

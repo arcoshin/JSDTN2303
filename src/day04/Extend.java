@@ -1,6 +1,6 @@
 package day04;
 
-public class Extend {
+class Extend {
     public static void main(String[] args) {
 
     }

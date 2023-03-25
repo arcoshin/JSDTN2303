@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * 求數組最大值
  */
-public class MaxOfArrayDemo {
+class MaxOfArrayDemo {
     public static void main(String[] args) {
         /**
          * 練習:創建一個數組包含元素10個，並賦值0~99的隨機數

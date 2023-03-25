@@ -8,7 +8,7 @@ import java.util.Scanner;
  * day06
  * 方法練習的作業類
  */
-public class HomeworkChecker {
+class HomeworkChecker {
     /**
      * 結束的方法
      */

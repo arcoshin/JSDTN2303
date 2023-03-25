@@ -3,7 +3,7 @@ package ooday01;
 /**
  * 汽車模板類
  */
-public class Car {
+class Car {
     /**
      * 屬性
      */

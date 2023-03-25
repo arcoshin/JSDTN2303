@@ -8,7 +8,7 @@ import java.util.Scanner;
  * 需求:
  * N個分數，去頭去尾求平均
  */
-public class CalTotalAvg {
+class CalTotalAvg {
     /**
      * 程序入口
      */

@@ -31,7 +31,7 @@ import java.util.*;
  * <p>
  * 20230325_XCX
  */
-public class HomeworkChecker extends HomeworkCheckerTools {
+class HomeworkChecker extends HomeworkCheckerTools {
     /**
      * 加載題目資料庫中的數據:不用每次進到系統就加載一次，所以放系統外
      */
@@ -132,7 +132,11 @@ class HomeworkCheckerTools {
                 }
             }
         } else {//others->Enter again!
-            uRWrong();//錯了，重來
+            try {
+                uRWrong();//錯了，重來
+            } catch (Exception e) {
+
+            }
             HomeworkChecker.homeworkChecker();
         }
     }

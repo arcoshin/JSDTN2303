@@ -4,7 +4,7 @@ package day03;
  * 補充三大結構 : 順序結構、分支結構、循環結構
  * if單路分支結構展示
  */
-public class IfDemo {
+class IfDemo {
     public static void main(String[] args) {
         //滿500打8折
         double cost = 400;//消費金額

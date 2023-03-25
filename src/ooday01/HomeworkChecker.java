@@ -8,7 +8,7 @@ import java.util.Scanner;
  * ooday01
  * 面向對象的作業類Ver2.0
  */
-public class HomeworkChecker {
+class HomeworkChecker {
     static String q1 = HomeworkCheckerTools.getQuestionName(1, "Student類與StudentTest類");
     static String q2 = HomeworkCheckerTools.getQuestionName(2, "Car類與CarTest類");
 

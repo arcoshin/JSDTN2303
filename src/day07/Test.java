@@ -1,6 +1,6 @@
 package day07;
 
-public class Test {
+class Test {
     static String q1 = getQuestionName(1,"XXX");
     private static String getQuestionName(int n,String title) {
         String questionName = n + "." + title;

@@ -8,7 +8,7 @@ import java.util.Scanner;
  * day05
  * 循環與數組的作業類
  */
-public class HomeworkChecker {
+class HomeworkChecker {
     /**
      * 結束的方法
      */

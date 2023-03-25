@@ -6,7 +6,7 @@ import java.util.Random;
 /**
  * 求數組最大值，並將其儲存到數組最後一個元素的下一個位置(擴容)
  */
-public class MaxOfArrayDemo {
+class MaxOfArrayDemo {
     public static void main(String[] args) {
         /**
          * 練習:創建一個數組包含元素10個，並賦值0~99的隨機數

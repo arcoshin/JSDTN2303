@@ -1,11 +1,11 @@
 package day00;
 
-public class Ping {
+class Ping {
 
 }
 
 /**
-www.tmooc.cn
+ping www.tmooc.cn
  *
-c.it211.com.cn
+ping c.it211.com.cn
  */

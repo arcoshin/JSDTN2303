@@ -6,7 +6,7 @@ import java.util.*;
  * day07
  * 編碼練習的作業類
  */
-public class HomeworkChecker {
+class HomeworkChecker {
     /**
      * 導入題目的方法(設計中...思考如何將方法分類擺好)
      */

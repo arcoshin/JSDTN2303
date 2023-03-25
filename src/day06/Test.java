@@ -1,6 +1,6 @@
 package day06;
 
-public class Test {
+class Test {
     public static void main(String[] args) {
         String s = enterTo(2);
         System.out.println(s);

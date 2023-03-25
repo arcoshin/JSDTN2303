@@ -3,7 +3,7 @@ package day02;
 /**
  * 變量的聲明與初始化
  */
-public class VarDemo {
+class VarDemo {
     public static void main(String[] args) {
 
 

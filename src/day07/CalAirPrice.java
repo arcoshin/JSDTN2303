@@ -11,7 +11,7 @@ import java.util.Scanner;
  * 旺季5~10月:頭等艙九折、商務艙八五折、經濟艙八折
  * 淡季11~4月:頭等艙七折、商務艙六五折、經濟艙六折
  */
-public class CalAirPrice {
+class CalAirPrice {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

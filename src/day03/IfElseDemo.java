@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * If ...else 雙路分支結構展示
  */
-public class IfElseDemo {
+class IfElseDemo {
     public static void main(String[] args) {
         //滿500打8折，未滿500打9折
         double cost = 300;//消費金額

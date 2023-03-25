@@ -3,7 +3,7 @@ package day05;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Extend {
+class Extend {
     public static void main(String[] args) {
         //計算1-100偶數和
         int sum = 0;

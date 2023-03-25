@@ -3,7 +3,7 @@ package day02;
 /**
  * 變量之間的轉換
  */
-public class TypeConv {
+class TypeConv {
     public static void main(String[] args) {
         /**===========================================================
          * 面試題

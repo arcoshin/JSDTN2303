@@ -1,7 +1,7 @@
 package ooday01;
 
 
-public class Homework {
+class Homework {
     public static void main(String[] args) {
         /**=======================
          * Student類與StudentTest類

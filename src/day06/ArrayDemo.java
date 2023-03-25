@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * 數組相關演示
  */
-public class ArrayDemo {
+class ArrayDemo {
     public static void main(String[] args) {
         /**========================================================================
          * 數組的複製

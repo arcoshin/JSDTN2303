@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * 猜數字小遊戲
  */
-public class Guessing {
+class Guessing {
     public static void main(String[] args) {
 
         //goal:用戶要猜的目標數(0~1000)

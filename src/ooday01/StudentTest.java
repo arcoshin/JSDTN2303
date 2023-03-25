@@ -3,7 +3,7 @@ package ooday01;
 /**
  * 學生類的測試類
  */
-public class StudentTest {
+class StudentTest {
     public static void main(String[] args) {
         /**
          * 創建一個學生對象

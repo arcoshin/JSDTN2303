@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * 數組演示類
  */
-public class ArrayDemo {
+class ArrayDemo {
     public static void main(String[] args) {
         /**
          * 1.數組的定義

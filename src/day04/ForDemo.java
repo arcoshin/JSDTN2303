@@ -3,7 +3,7 @@ package day04;
 /**
  * 循環結構for展示
  */
-public class ForDemo {
+class ForDemo {
     public static void main(String[] args) {
         //透過程序計算1+2+3+.......+98+99+100的計算結果
         int sum = 0;

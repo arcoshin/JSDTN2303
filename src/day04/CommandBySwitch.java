@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * 命令解析程序
  */
-public class CommandBySwitch {
+class CommandBySwitch {
     public static void main(String[] args) {
         int a = 0;
         while (++a <= 5) {

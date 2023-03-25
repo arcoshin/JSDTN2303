@@ -6,7 +6,7 @@ import java.util.Random;
 /**
  * 方法演示類
  */
-public class MethodDemo {
+class MethodDemo {
     public static void main(String[] args) {
 
         System.out.println("程序開始......");

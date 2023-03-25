@@ -3,7 +3,7 @@ package day06;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Extend {
+class Extend {
     /**
      * 數組產生器
      */

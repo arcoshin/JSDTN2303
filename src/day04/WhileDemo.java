@@ -3,7 +3,7 @@ package day04;
 /**
  * 循環結構while相關演示
  */
-public class WhileDemo {
+class WhileDemo {
     public static void main(String[] args) {
         //輸出五次"行動是成功的階梯"
         int time = 0;

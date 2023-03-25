@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Homework {
+class Homework {
     public static void main(String[] args) {
         /**====================
          * addition隨機加法運算器

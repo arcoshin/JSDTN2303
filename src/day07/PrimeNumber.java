@@ -8,7 +8,7 @@ import java.util.Collection;
  * 找到2~100之間所有素數(質數)
  * 素數:除了1與本身之外，不能被其他自然數整除的數
  */
-public class PrimeNumber {
+class PrimeNumber {
     public static void main(String[] args) {
         int[] priNum = {};
         Collection c  = new ArrayList();

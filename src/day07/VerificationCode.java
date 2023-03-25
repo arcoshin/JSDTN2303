@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * 隨機生成N位驗證碼(大小寫字母+數字)
  */
-public class VerificationCode {
+class VerificationCode {
     /**
      * 生成N位驗證碼
      */

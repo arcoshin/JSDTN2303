@@ -7,7 +7,7 @@ import java.util.Scanner;
  * 需求:猜數字小遊戲
  * 訓練目標:while(true)自造死循環(必須配合break否則永遠無法結束還循環)
  */
-public class Guessing {
+class Guessing {
     public static void main(String[] args) {
         /**
          * 隨機賦值目標數

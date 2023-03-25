@@ -2,7 +2,7 @@ package ooday01;
 
 import java.io.*;
 
-public class IoTest {
+class IoTest {
     public static void main(String[] args) throws IOException {
 //        FileOutputStream fos = new FileOutputStream("./src/day00/demo/test.txt");
 //        fos.close();

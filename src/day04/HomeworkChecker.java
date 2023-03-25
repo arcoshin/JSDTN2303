@@ -6,7 +6,7 @@ import java.util.Scanner;
  * day04
  * switch...case結構、循環結構的練習
  */
-public class HomeworkChecker {
+class HomeworkChecker {
     /**
      * 結束的方法
      */

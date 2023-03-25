@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * If...else If...多路分支結構展示
  */
-public class IfElseIfDemo {
+class IfElseIfDemo {
     public static void main(String[] args) {
         //滿2000打5折，滿1000打7折，滿500打8折，未滿500打9折
         double cost = 300;//消費金額

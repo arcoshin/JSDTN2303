@@ -3,7 +3,7 @@ package ooday01;
 /**
  * 學生模板類
  */
-public class Student {
+class Student {
     /**
      * 成員變量
      */

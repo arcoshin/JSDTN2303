@@ -3,7 +3,7 @@ package day05;
 /**
  * For的特殊格式及關鍵字Break、Continue的演示
  */
-public class ForDemo {
+class ForDemo {
     public static void main(String[] args) {
         //break
         for (int num = 1; num <= 9; num++) {

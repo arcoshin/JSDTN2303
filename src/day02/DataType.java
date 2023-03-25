@@ -3,7 +3,7 @@ package day02;
 /**
  * 變量種類
  */
-public class DataType {
+class DataType {
     public static void main(String[] args) {
         /**
          * 1. int:整數類型，四個字節，-2^31~2^31-1(正負21億多)*/

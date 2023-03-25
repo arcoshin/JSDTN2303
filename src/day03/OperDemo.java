@@ -3,7 +3,7 @@ package day03;
 /**
  * 運算符
  */
-public class OperDemo {
+class OperDemo {
     public static void main(String[] args) {
         /**======================================
          * 條件(三元)運算符: boolean? a:b

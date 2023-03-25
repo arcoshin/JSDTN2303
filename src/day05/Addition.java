@@ -6,7 +6,7 @@ import java.util.Scanner;
  * 十題隨機加法測驗，共十題不倒扣，算出分數
  */
 
-public class Addition {
+class Addition {
     public static void main(String[] args) {
 
 
