@@ -59,7 +59,7 @@ class HomeworkChecker extends HomeworkCheckerTools {
         /**
          * 作業查找分支系統
          */
-        whatUChooseFromMenu(checker,questionList);
+        whatUChooseFromMenu(checker,questionList);//選題分支
 
         /**
          * 防止多重跳轉間重複執行本方法，添加return讓執行至此時，一定結束本次方法。
