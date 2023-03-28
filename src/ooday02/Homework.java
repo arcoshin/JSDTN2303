@@ -8,7 +8,7 @@ import java.awt.*;
  * Trans----------------------------
  * Person -> Human 類
  * Student -> Learner 類
- * Teacher -> Master 類
+ * Teacher -> Feeder 類
  * Doctor -> Surgeon 類
  * <p>
  * Animal -> LivingCreature 類

@@ -11,9 +11,9 @@ import java.util.Scanner;
  * weekendHomework 2023.03.28
  * 接口練習的作業類
  * HomeworkChecker.ver3.3
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
  * =====================
  * Update Information:
  * =====================
@@ -51,7 +51,7 @@ class HomeworkChecker extends HomeworkCheckerTools {
          * 進入選單主頁
          */
         showMenuTip(questionList);//選單主頁的輸入提示
-        showQuestionList(questionList,questionList.length);//遍歷所有題目
+        showQuestionList(questionList, questionList.length);//遍歷所有題目
 
 
         /**
@@ -62,7 +62,7 @@ class HomeworkChecker extends HomeworkCheckerTools {
         /**
          * 作業查找分支系統
          */
-        whatUChooseFromMenu(checker,questionList);//將選擇派入選題分支
+        whatUChooseFromMenu(checker, questionList);//將選擇派入選題分支
 
         /**
          * 防止多重跳轉間重複執行本方法，添加return讓執行至此時，一定結束本次方法。
@@ -99,6 +99,7 @@ class Question {
 
     /**
      * 題目構造器
+     *
      * @param num             題目序號
      * @param questionName    題目名稱
      * @param questionContent 題目要求內文
@@ -116,10 +117,11 @@ class Question {
 class HomeworkCheckerTools {
     /**
      * 主選單分支業務
-     * @param checker 跳轉目標的代碼
+     *
+     * @param checker      跳轉目標的代碼
      * @param questionList 跳轉目標的名稱
      */
-    protected static void whatUChooseFromMenu (int checker ,Question[] questionList) throws InterruptedException {
+    protected static void whatUChooseFromMenu(int checker, Question[] questionList) throws InterruptedException {
         if (checker == 99) {//選擇99則直接結束本方法
             return;
         } else if (checker > 0 && checker <= questionList.length) {//homeworkCheck != 99 but 10>=homeworkCheck>=max
@@ -148,9 +150,10 @@ class HomeworkCheckerTools {
 
     /**
      * 遍歷所有題目的方法
+     *
      * @param max 本次開放題數
      */
-    protected static void showQuestionList(Question[] questionList ,int max) {
+    protected static void showQuestionList(Question[] questionList, int max) {
         for (int i = 0; i < HomeworkChecker.questionList.length; i++) {//遍歷題目列表
             System.out.println(questionList[i].num + "." + questionList[i].questionName);
         }
@@ -243,7 +246,7 @@ class HomeworkCheckerTools {
 /**
  * 資料庫類(尚須手動更新)
  */
-class QuestionDatabase extends HomeworkCheckerTools{
+class QuestionDatabase extends HomeworkCheckerTools {
     /**
      * 將題目存入並生成題目列表(data)的方法:QB->HWC
      */
@@ -268,7 +271,252 @@ class QuestionDatabase extends HomeworkCheckerTools{
     public static void question1() throws InterruptedException {
         waitForPreparing();
         //=======================================================
+        System.out.println(
+                "/**\n" +
+                        " * 動物們的父類---動物類\n" +
+                        " */\n" +
+                        "abstract class Animal {\n" +
+                        "    /**\n" +
+                        "     * 共有屬性\n" +
+                        "     */\n" +
+                        "    String name;\n" +
+                        "    int age;\n" +
+                        "    String color;\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 構造器\n" +
+                        "     */\n" +
+                        "    Animal(String name, int age, String color) {\n" +
+                        "        this.name = name;\n" +
+                        "        this.age = age;\n" +
+                        "        this.color = color;\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 共有方法\n" +
+                        "     */\n" +
+                        "    void drink() {\n" +
+                        "        System.out.println(color + \"色\" + age + \"歲的\" + name + \"正在喝水......\");\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 抽象方法\n" +
+                        "     */\n" +
+                        "    abstract void eat();\n" +
+                        "}\n" +
+                        "\n" +
+                        "/**\n" +
+                        " * 狗類\n" +
+                        " */\n" +
+                        "class Dog extends Animal implements Swim{\n" +
+                        "    /**\n" +
+                        "     * 子類構造 : super()調用父類有參構造器\n" +
+                        "     */\n" +
+                        "    Dog(String name, int age, String color) {\n" +
+                        "        super(name, age, color);\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 特有方法\n" +
+                        "     */\n" +
+                        "    void lookHome() {\n" +
+                        "        System.out.println(name + \"正在看家......\");\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 重寫超類抽象方法\n" +
+                        "     */\n" +
+                        "    @Override\n" +
+                        "    void eat() {\n" +
+                        "        System.out.println(name + \"正在啃骨頭......\");\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 重寫接口中的方法 : 一律必須public\n" +
+                        "     */\n" +
+                        "    @Override\n" +
+                        "    public void swim() {\n" +
+                        "        System.out.println(color +\"色\" + age +\"歲的狗狗\" + name + \"正在游泳......\");\n" +
+                        "    }\n" +
+                        "}\n" +
+                        "\n" +
+                        "/**\n" +
+                        " * 雞類\n" +
+                        " */\n" +
+                        "class Chick extends Animal{\n" +
+                        "    /**\n" +
+                        "     * 子類構造 : super()調用父類有參構造器\n" +
+                        "     */\n" +
+                        "    Chick(String name, int age, String color) {\n" +
+                        "        super(name, age, color);\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 特有方法\n" +
+                        "     */\n" +
+                        "    void layEgg() {\n" +
+                        "        System.out.println(name + \"正在下蛋呢......\");\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 重寫超類抽象方法\n" +
+                        "     */\n" +
+                        "    @Override\n" +
+                        "    void eat() {\n" +
+                        "        System.out.println(name + \"正在吃小米......\");\n" +
+                        "    }\n" +
+                        "}\n" +
+                        "\n" +
+                        "/**\n" +
+                        " * 魚類\n" +
+                        " */\n" +
+                        "class Fish extends Animal implements Swim{\n" +
+                        "    /**\n" +
+                        "     * 子類構造 : super()調用父類有參構造器\n" +
+                        "     */\n" +
+                        "    Fish(String name, int age, String color) {\n" +
+                        "        super(name, age, color);\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 重寫超類抽象方法\n" +
+                        "     */\n" +
+                        "    @Override\n" +
+                        "    void eat() {\n" +
+                        "        System.out.println(name + \"正在吃小蝦米......\");\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 重寫接口中的方法 : 一律必須public\n" +
+                        "     */\n" +
+                        "    @Override\n" +
+                        "    public void swim() {\n" +
+                        "        System.out.println(color +\"色\" + age +\"歲的小魚\" + name + \"正在游泳......\");\n" +
+                        "    }\n" +
+                        "}\n" +
+                        "\n" +
+                        "/**\n" +
+                        " * 游泳類\n" +
+                        " */\n" +
+                        "interface Swim {\n" +
+                        "    void swim();\n" +
+                        "}" +
+                        "\n" +
+                        "/**\n" +
+                        " * 動物測試類\n" +
+                        " */\n" +
+                        "class AnimalDemo {\n" +
+                        "    public static void main(String[] args) {\n" +
+                        "        /**\n" +
+                        "         * 創建測試對象\n" +
+                        "         */\n" +
+                        "        Dog dog = new Dog(\"小黑\", 1, \"黑\");\n" +
+                        "        System.out.println(\"======以下調用\" + dog.name + \"的屬性與行為======\");\n" +
+                        "        /**\n" +
+                        "         * 調用狗的每個屬性\n" +
+                        "         */\n" +
+                        "        System.out.println(\"有一隻\" + dog.color + \"狗叫做\" + dog.name + \"，今年\" + dog.age + \"歲\");\n" +
+                        "        System.out.println();\n" +
+                        "        /**\n" +
+                        "         * 調用狗每的行為\n" +
+                        "         */\n" +
+                        "        dog.eat();//重寫超類方法\n" +
+                        "        dog.drink();//複用超類方法\n" +
+                        "        dog.swim();//重寫接口方法\n" +
+                        "        dog.lookHome();//狗類特定方法\n" +
+                        "        \n" +
+                        "        /**\n" +
+                        "         * 創建測試對象\n" +
+                        "         */\n" +
+                        "        Chick chick  = new Chick(\"小白\", 1, \"白\");\n" +
+                        "        System.out.println(\"======以下調用\" + chick.name + \"的屬性與行為======\");\n" +
+                        "        /**\n" +
+                        "         * 調用雞的每個屬性\n" +
+                        "         */\n" +
+                        "        System.out.println(\"有一隻\" + chick.color + \"雞叫做\" + chick.name + \"，今年\" + chick.age + \"歲\");\n" +
+                        "        System.out.println();\n" +
+                        "        /**\n" +
+                        "         * 調用雞的每個行為\n" +
+                        "         */\n" +
+                        "        chick.eat();//重寫超類方法\n" +
+                        "        chick.drink();//複用超類方法\n" +
+                        "        chick.layEgg();//雞類特定方法\n" +
+                        "        \n" +
+                        "        /**\n" +
+                        "         * 創建測試對象\n" +
+                        "         */\n" +
+                        "        Fish fish = new Fish(\"小金\", 1, \"金\");\n" +
+                        "        System.out.println(\"======以下調用\" + fish.name + \"的屬性與行為======\");\n" +
+                        "        /**\n" +
+                        "         * 調用魚的每個屬性\n" +
+                        "         */\n" +
+                        "        System.out.println(\"有一隻\" + fish.color + \"魚叫做\" + fish.name + \"，今年\" + fish.age + \"歲\");\n" +
+                        "        System.out.println();\n" +
+                        "        /**\n" +
+                        "         * 調用魚的每個行為\n" +
+                        "         */\n" +
+                        "        fish.eat();//重寫超類方法\n" +
+                        "        fish.drink();//複用超類方法\n" +
+                        "        fish.swim();//重寫接口方法\n" +
+                        "    }\n" +
+                        "}\n"
+        );
 
+        System.out.println("正在輸出程序結果......");
+
+        //背景代碼存放區開始
+        /**
+         * 創建測試對象
+         */
+        Dog dog = new Dog("小黑", 1, "黑");
+        System.out.println("======以下調用" + dog.name + "的屬性與行為======");
+        /**
+         * 調用狗的每個屬性
+         */
+        System.out.println("有一隻" + dog.color + "狗叫做" + dog.name + "，今年" + dog.age + "歲");
+        System.out.println();
+        /**
+         * 調用狗每的行為
+         */
+        dog.eat();//重寫超類方法
+        dog.drink();//複用超類方法
+        dog.swim();//重寫接口方法
+        dog.lookHome();//狗類特定方法
+
+        /**
+         * 創建測試對象
+         */
+        Chick chick = new Chick("小白", 1, "白");
+        System.out.println("======以下調用" + chick.name + "的屬性與行為======");
+        /**
+         * 調用雞的每個屬性
+         */
+        System.out.println("有一隻" + chick.color + "雞叫做" + chick.name + "，今年" + chick.age + "歲");
+        System.out.println();
+        /**
+         * 調用雞的每個行為
+         */
+        chick.eat();//重寫超類方法
+        chick.drink();//複用超類方法
+        chick.layEgg();//雞類特定方法
+
+        /**
+         * 創建測試對象
+         */
+        Fish fish = new Fish("小金", 1, "金");
+        System.out.println("======以下調用" + fish.name + "的屬性與行為======");
+        /**
+         * 調用魚的每個屬性
+         */
+        System.out.println("有一隻" + fish.color + "魚叫做" + fish.name + "，今年" + fish.age + "歲");
+        System.out.println();
+        /**
+         * 調用魚的每個行為
+         */
+        fish.eat();//重寫超類方法
+        fish.drink();//複用超類方法
+        fish.swim();//重寫接口方法
+        //背景代碼存放區結束
         //=======================================================
         backToMenu();
     }
@@ -279,7 +527,143 @@ class QuestionDatabase extends HomeworkCheckerTools{
     public static void question2() throws InterruptedException {
         waitForPreparing();
         //=======================================================
+        System.out.println(
+                "/**\n" +
+                        " * 引用類型數組的演示\n" +
+                        " */\n" +
+                        "public class RefArrayDemo {\n" +
+                        "    public static void main(String[] args) {\n" +
+                        "        //聲明Dog型數組dogs，包含三個元素，默認值為null\n" +
+                        "        Dog[] dogs = new Dog[3];\n" +
+                        "        dogs[0] = new Dog(\"小黑\", 2, \"黑\");\n" +
+                        "        dogs[1] = new Dog(\"小白\", 3, \"白\");\n" +
+                        "        dogs[2] = new Dog(\"小黃\", 4, \"黃\");\n" +
+                        "        for (int i = 0; i < dogs.length; i++) {\n" +
+                        "            System.out.println(\"======以下調用\" + dogs[i].name + \"的屬性與行為======\");\n" +
+                        "            /**\n" +
+                        "             * 調用每隻狗的屬性\n" +
+                        "             */\n" +
+                        "            System.out.println(\"有一隻\" + dogs[i].color + \"狗叫做\" + dogs[i].name + \"，今年\" + dogs[i].age + \"歲\");\n" +
+                        "            System.out.println();\n" +
+                        "            /**\n" +
+                        "             * 調用每隻狗的行為\n" +
+                        "             */\n" +
+                        "            dogs[i].eat();//重寫超類方法\n" +
+                        "            dogs[i].drink();//複用超類方法\n" +
+                        "            dogs[i].swim();//重寫接口方法\n" +
+                        "            dogs[i].lookHome();//狗類特定方法\n" +
+                        "        }\n" +
+                        "\n" +
+                        "        //聲明Chick型數組chicks，包含三個元素，默認值為null\n" +
+                        "        Chick[] chicks = new Chick[3];\n" +
+                        "        chicks[0] = new Chick(\"小紅\", 1, \"紅\");\n" +
+                        "        chicks[1] = new Chick(\"小黑\", 1, \"黑\");\n" +
+                        "        chicks[2] = new Chick(\"小花\", 1, \"花\");\n" +
+                        "        for (int i = 0; i < chicks.length; i++) {\n" +
+                        "            System.out.println(\"======以下調用\" + chicks[i].name + \"的屬性與行為======\");\n" +
+                        "            /**\n" +
+                        "             * 調用每隻雞的屬性\n" +
+                        "             */\n" +
+                        "            System.out.println(\"有一隻\" + chicks[i].color + \"雞叫做\" + chicks[i].name + \"，今年\" + chicks[i].age + \"歲\");\n" +
+                        "            System.out.println();\n" +
+                        "            /**\n" +
+                        "             * 調用每隻雞的行為\n" +
+                        "             */\n" +
+                        "            chicks[i].eat();//重寫超類方法\n" +
+                        "            chicks[i].drink();//複用超類方法\n" +
+                        "            chicks[i].layEgg();//雞類特定方法\n" +
+                        "        }\n" +
+                        "\n" +
+                        "        //聲明Fish型數組fish，包含三個元素，默認值為null\n" +
+                        "        Fish[] fish = new Fish[2];\n" +
+                        "        fish[0] = new Fish(\"小金\", 2, \"金\");\n" +
+                        "        fish[1] = new Fish(\"小銀\", 2, \"銀\");\n" +
+                        "        for (int i = 0; i < fish.length; i++) {\n" +
+                        "            System.out.println(\"======以下調用\" + fish[i].name + \"的屬性與行為======\");\n" +
+                        "            /**\n" +
+                        "             * 調用每隻魚的屬性\n" +
+                        "             */\n" +
+                        "            System.out.println(\"有一隻\" + fish[i].color + \"魚叫做\" + fish[i].name + \"，今年\" + fish[i].age + \"歲\");\n" +
+                        "            System.out.println();\n" +
+                        "            /**\n" +
+                        "             * 調用每隻魚的行為\n" +
+                        "             */\n" +
+                        "            fish[i].eat();//重寫超類方法\n" +
+                        "            fish[i].drink();//複用超類方法\n" +
+                        "            fish[i].swim();//重寫接口方法\n" +
+                        "        }\n" +
+                        "\n" +
+                        "    }\n" +
+                        "}\n"
+        );
 
+        System.out.println("正在輸出程序結果......");
+
+        //背景代碼存放區開始
+        //聲明Dog型數組dogs，包含三個元素，默認值為null
+        Dog[] dogs = new Dog[3];
+        dogs[0] = new Dog("小黑", 2, "黑");
+        dogs[1] = new Dog("小白", 3, "白");
+        dogs[2] = new Dog("小黃", 4, "黃");
+        for (int i = 0; i < dogs.length; i++) {
+            System.out.println("======以下調用" + dogs[i].name + "的屬性與行為======");
+            /**
+             * 調用每隻狗的屬性
+             */
+            System.out.println("有一隻" + dogs[i].color + "狗叫做" + dogs[i].name + "，今年" + dogs[i].age + "歲");
+            System.out.println();
+            /**
+             * 調用每隻狗的行為
+             */
+            dogs[i].eat();//重寫超類方法
+            dogs[i].drink();//複用超類方法
+            dogs[i].swim();//重寫接口方法
+            dogs[i].lookHome();//狗類特定方法
+            System.out.println("=========================================================================");
+        }
+
+        //聲明Chick型數組chicks，包含三個元素，默認值為null
+        Chick[] chicks = new Chick[3];
+        chicks[0] = new Chick("小紅", 1, "紅");
+        chicks[1] = new Chick("小黑", 1, "黑");
+        chicks[2] = new Chick("小花", 1, "花");
+        for (int i = 0; i < chicks.length; i++) {
+            System.out.println("======以下調用" + chicks[i].name + "的屬性與行為======");
+            /**
+             * 調用每隻雞的屬性
+             */
+            System.out.println("有一隻" + chicks[i].color + "雞叫做" + chicks[i].name + "，今年" + chicks[i].age + "歲");
+            System.out.println();
+            /**
+             * 調用每隻雞的行為
+             */
+            chicks[i].eat();//重寫超類方法
+            chicks[i].drink();//複用超類方法
+            chicks[i].layEgg();//雞類特定方法
+            System.out.println("=========================================================================");
+        }
+
+        //聲明Fish型數組fish，包含三個元素，默認值為null
+        Fish[] fish = new Fish[2];
+        fish[0] = new Fish("小金", 2, "金");
+        fish[1] = new Fish("小銀", 2, "銀");
+        for (int i = 0; i < fish.length; i++) {
+            System.out.println("======以下調用" + fish[i].name + "的屬性與行為======");
+            /**
+             * 調用每隻魚的屬性
+             */
+            System.out.println("有一隻" + fish[i].color + "魚叫做" + fish[i].name + "，今年" + fish[i].age + "歲");
+            System.out.println();
+            /**
+             * 調用每隻魚的行為
+             */
+            fish[i].eat();//重寫超類方法
+            fish[i].drink();//複用超類方法
+            fish[i].swim();//重寫接口方法
+            System.out.println("=========================================================================");
+        }
+
+        //背景代碼存放區結束
         //=======================================================
         backToMenu();
     }
@@ -375,19 +759,21 @@ class QuestionDatabase extends HomeworkCheckerTools{
     }
 
 }
-class Question3Show extends JPanel{
+
+class Question3Show extends JPanel {
     public static ImageIcon image;
+
     @Override
     public void paint(Graphics g) {
         image = new ImageIcon("src/ooday03/img/TmoocEmployeeSystemDesign.png");
-        image.paintIcon(this,g,0,0);
+        image.paintIcon(this, g, 0, 0);
     }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         Question3Show panel = new Question3Show();
         frame.add(panel);
-        frame.setSize(880+16, 601+39);
+        frame.setSize(880 + 16, 601 + 39);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);

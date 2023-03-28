@@ -1,4 +1,4 @@
-package ooday03;
+package ooday04;
 
 /**
  * 動物們的父類---動物類
@@ -131,64 +131,3 @@ interface Swim {
 }
 
 
-/**
- * 動物測試類
- */
-class AnimalDemo {
-    public static void main(String[] args) {
-        /**
-         * 創建測試對象
-         */
-        Dog dog = new Dog("小黑", 1, "黑");
-        System.out.println("======以下調用" + dog.name + "的屬性與行為======");
-        /**
-         * 調用狗的每個屬性
-         */
-        System.out.println("有一隻" + dog.color + "狗叫做" + dog.name + "，今年" + dog.age + "歲");
-        System.out.println();
-        /**
-         * 調用狗每的行為
-         */
-        dog.eat();//重寫超類方法
-        dog.drink();//複用超類方法
-        dog.swim();//重寫接口方法
-        dog.lookHome();//狗類特定方法
-        System.out.println("=========================================================================");
-        
-        /**
-         * 創建測試對象
-         */
-        Chick chick  = new Chick("小白", 1, "白");
-        System.out.println("======以下調用" + chick.name + "的屬性與行為======");
-        /**
-         * 調用雞的每個屬性
-         */
-        System.out.println("有一隻" + chick.color + "雞叫做" + chick.name + "，今年" + chick.age + "歲");
-        System.out.println();
-        /**
-         * 調用雞的每個行為
-         */
-        chick.eat();//重寫超類方法
-        chick.drink();//複用超類方法
-        chick.layEgg();//雞類特定方法
-        System.out.println("=========================================================================");
-        
-        /**
-         * 創建測試對象
-         */
-        Fish fish = new Fish("小金", 1, "金");
-        System.out.println("======以下調用" + fish.name + "的屬性與行為======");
-        /**
-         * 調用魚的每個屬性
-         */
-        System.out.println("有一隻" + fish.color + "魚叫做" + fish.name + "，今年" + fish.age + "歲");
-        System.out.println();
-        /**
-         * 調用魚的每個行為
-         */
-        fish.eat();//重寫超類方法
-        fish.drink();//複用超類方法
-        fish.swim();//重寫接口方法
-        System.out.println("=========================================================================");
-    }
-}
