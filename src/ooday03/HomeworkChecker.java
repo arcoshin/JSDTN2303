@@ -1,11 +1,16 @@
-package day00;
+package ooday03;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.Scanner;
 
+
 /**
- * weekendHomework 2023.0X.XX
- * 作業類/周末作業類
- * HomeworkChecker.ver3.7
+ * weekendHomework 2023.03.28
+ * 接口練習的作業類
+ * HomeworkChecker.ver3.3
  *
  *
  *
@@ -70,7 +75,8 @@ class HomeworkChecker extends HomeworkCheckerTools {
      */
     public static void main(String[] args) {
         try {
-            homeworkChecker();//進入系統
+            HomeworkChecker HC = new HomeworkChecker();
+            HC.homeworkChecker();//進入系統
             ending();//退出系統
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -92,6 +98,7 @@ class Question {
     String questionContent;//題目要求內文
 
     /**
+     * 題目構造器
      * @param num             題目序號
      * @param questionName    題目名稱
      * @param questionContent 題目要求內文
@@ -107,7 +114,6 @@ class Question {
  * 本系統工具類
  */
 class HomeworkCheckerTools {
-
     /**
      * 主選單分支業務
      * @param checker 跳轉目標的代碼
@@ -224,7 +230,7 @@ class HomeworkCheckerTools {
     }
 
     /**
-     * 結束的方法
+     * 告別的方法
      */
     protected static void ending() throws InterruptedException {
         System.out.println("感謝您的耐心檢查，系統正在關閉......");
@@ -242,17 +248,17 @@ class QuestionDatabase extends HomeworkCheckerTools{
      * 將題目存入並生成題目列表(data)的方法:QB->HWC
      */
     public Question[] downloadQuestion() {
-        Question[] data = new Question[2];//<<---------------------------------手動修改
-        data[0] = new Question(1, "", "");
-        data[1] = new Question(2, "", "");
-//        data[2] = new Question(3, "", "");
-//        data[3] = new Question(4, "", "");
-//        data[4] = new Question(5, "", "");
-//        data[5] = new Question(6, "", "");
-//        data[6] = new Question(7, "", "");
-//        data[7] = new Question(8, "", "");
-//        data[8] = new Question(9, "", "");
-//        data[9] = new Question(10, "", "");
+        Question[] data = new Question[3];//<<---------------------------------手動修改
+        data[0] = new Question(1, "動物類相關練習", "新增游泳接口類");
+        data[1] = new Question(2, "RefArrayDemo類", "引用數組相關練習");
+        data[2] = new Question(3, "達內員工管理系統設計圖", "作圖題");
+//        data[3] = new Question(4, "Addition隨機加法運算", "練習for循環");
+//        data[4] = new Question(5, "九九乘法表", "練習雙重for循環");
+//        data[5] = new Question(6, "MaxOfArray球最大並放最後一位", "練習數組、循環");
+//        data[6] = new Question(7, "生成N為驗證碼", "練習數組、循環和方法");
+//        data[7] = new Question(8, "找出2~100中所有素數", "練習雙重for循環");
+//        data[8] = new Question(9, "機票打折系統", "練習分支與方法");
+//        data[9] = new Question(10, "去大去小平均的打分計算", "練習數組、循環和方法");
         return data;
     }
 
@@ -284,7 +290,9 @@ class QuestionDatabase extends HomeworkCheckerTools{
     public static void question3() throws InterruptedException {
         waitForPreparing();
         //=======================================================
-
+        String[] args = {};
+        Question3Show.main(args);
+        System.out.println("請檢查桌面工具列以確定畫板程序是否被IDEA覆蓋......");
         //=======================================================
         backToMenu();
     }
@@ -366,6 +374,24 @@ class QuestionDatabase extends HomeworkCheckerTools{
         backToMenu();
     }
 
+}
+class Question3Show extends JPanel{
+    public static ImageIcon image;
+    @Override
+    public void paint(Graphics g) {
+        image = new ImageIcon("src/ooday03/img/TmoocEmployeeSystemDesign.png");
+        image.paintIcon(this,g,0,0);
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame();
+        Question3Show panel = new Question3Show();
+        frame.add(panel);
+        frame.setSize(880+16, 601+39);
+        frame.setLocationRelativeTo(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
 }
 
 

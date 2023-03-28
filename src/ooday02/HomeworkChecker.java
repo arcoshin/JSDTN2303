@@ -2,7 +2,6 @@ package ooday02;
 
 import java.util.Scanner;
 
-import static ooday02.HomeworkChecker.homeworkChecker;
 
 /**
  * 繼承相關練習的作業類
@@ -128,7 +127,7 @@ class HomeworkCheckerTools {
             }
         } else {//others->Enter again!
             uRWrong();//錯了，重來
-            homeworkChecker();
+            HomeworkChecker.homeworkChecker();
             return;
         }
     }
@@ -197,7 +196,7 @@ class HomeworkCheckerTools {
     protected static void backToMenu() throws InterruptedException {
         System.out.println("本題展示完成，即將返回大題選單......");
         Thread.sleep(1000);
-        homeworkChecker();
+        HomeworkChecker.homeworkChecker();
     }
 
     /**

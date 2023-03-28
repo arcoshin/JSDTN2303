@@ -1,6 +1,6 @@
 package ooday03;
 
-class Person {
+abstract class Person {
     /**
      * 共有屬性
      */
@@ -25,9 +25,7 @@ class Person {
         System.out.println(name + "正在睡覺...");
     }
 
-    void sayHi() {
-        System.out.println("大家好，我叫" + name + "，今年" + age + "歲，來自" + address);
-    }
+    abstract void sayHi();
 
 }
 
@@ -70,7 +68,7 @@ class Student extends Person {
 
     @Override
     void sayHi() {
-        super.sayHi();
+        System.out.println("大家好，我叫" + name + "，今年" + age + "歲，來自" + address);
         System.out.println("目前就讀的是" + className + "班，學號為" + stuId + "，很高興認識大家");
     }
 }
@@ -89,20 +87,26 @@ class Teacher extends Person {
 
     @Override
     void sayHi() {
-        super.sayHi();
+        System.out.println("大家好，我叫" + name + "，今年" + age + "歲，來自" + address);
         System.out.println("目前是名老師，月薪約" + salary + "元");
     }
 }
 
-class Doctor extends Person{
+class Doctor extends Person {
     String level;
 
-    Doctor(String name,int age,String address,String level){
+    Doctor(String name, int age, String address, String level) {
         super(name, age, address);
         this.level = level;
     }
 
     void cut() {
         System.out.println(name + "醫師正在進行手術.....");
+    }
+
+    @Override
+    void sayHi() {
+        System.out.println("大家好，我叫" + name + "，今年" + age + "歲，來自" + address);
+        System.out.println("目前是名" + level + "醫師");
     }
 }
