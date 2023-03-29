@@ -2,8 +2,7 @@ package ooday03;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import java.awt.image.ImageObserver;
 import java.util.Scanner;
 
 
@@ -241,6 +240,17 @@ class HomeworkCheckerTools {
         System.out.println("END");
     }
 
+    /**
+     * 展示圖片的方法
+     */
+    protected static void showImage() {
+
+    }
+
+
+
+
+
 }
 
 /**
@@ -251,11 +261,11 @@ class QuestionDatabase extends HomeworkCheckerTools {
      * 將題目存入並生成題目列表(data)的方法:QB->HWC
      */
     public Question[] downloadQuestion() {
-        Question[] data = new Question[3];//<<---------------------------------手動修改
+        Question[] data = {};//<<---------------------------------手動修改
         data[0] = new Question(1, "動物類相關練習", "新增游泳接口類");
         data[1] = new Question(2, "RefArrayDemo類", "引用數組相關練習");
         data[2] = new Question(3, "達內員工管理系統設計圖", "作圖題");
-//        data[3] = new Question(4, "Addition隨機加法運算", "練習for循環");
+        data[3] = new Question(4, "Test", "Test");
 //        data[4] = new Question(5, "九九乘法表", "練習雙重for循環");
 //        data[5] = new Question(6, "MaxOfArray球最大並放最後一位", "練習數組、循環");
 //        data[6] = new Question(7, "生成N為驗證碼", "練習數組、循環和方法");
@@ -675,7 +685,7 @@ class QuestionDatabase extends HomeworkCheckerTools {
         waitForPreparing();
         //=======================================================
         String[] args = {};
-        Question3Show.main(args);
+        MyPanel.main(args);
         System.out.println("請檢查桌面工具列以確定畫板程序是否被IDEA覆蓋......");
         //=======================================================
         backToMenu();
@@ -760,8 +770,9 @@ class QuestionDatabase extends HomeworkCheckerTools {
 
 }
 
-class Question3Show extends JPanel {
+class MyPanel extends JPanel {
     public static ImageIcon image;
+    public static ImageIcon image2;
 
     @Override
     public void paint(Graphics g) {
@@ -769,14 +780,21 @@ class Question3Show extends JPanel {
         image.paintIcon(this, g, 0, 0);
     }
 
-    public static void main(String[] args) {
+    public static void showImage () {//880,601
+//        int width = image.getIconWidth();
+//        int height = image.getIconHeight();
+
         JFrame frame = new JFrame();
-        Question3Show panel = new Question3Show();
+        MyPanel panel = new MyPanel();
         frame.add(panel);
         frame.setSize(880 + 16, 601 + 39);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        showImage();
     }
 }
 
