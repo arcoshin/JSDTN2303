@@ -9,7 +9,7 @@ package ooday04;
  * 2.匿名內部類不可以修改外面局部變量的值
  *
  * 3.面試題 : 匿名內部類有獨立的class文件嗎? (字節碼文件)  答 : 有!!!所有內部類都有!
- * 在專案資料夾/out資料夾中/當前文件所在包位置/可以發現 : 外部類名 + $ + 內部類名(匿名內部類則為1,2,3,4)文件即是
+ * 在專案資料夾/out資料夾/當前文件所在包位置/可以發現 : 外部類名 + $ + 內部類名(此處匿名內部類則為1,2,3,4).class文件即是
  */
 public class AnonInnerClassDemo {
     public static void main(String[] args) {
@@ -25,7 +25,7 @@ public class AnonInnerClassDemo {
              */
             @Override
             void show() {
-                System.out.println("此處已調用o1.show()的方法...");
+                System.out.println("此處已成功執行抽象類Aoo的子類對象，o1的show()的方法...");
             }
         };
 
@@ -41,7 +41,7 @@ public class AnonInnerClassDemo {
              */
             @Override
             void show() {
-                System.out.println("此處已調用o2.show()的方法...");
+                System.out.println("此處已成功執行抽象類Aoo的子類對象，o2的show()的方法...");
             }
         };
 
@@ -57,10 +57,36 @@ public class AnonInnerClassDemo {
          */
         o1.show();
         o2.show();
+
+        /**
+         * 接口的匿名內部類 :
+         * 直接以線程任務類為例，並重寫執行體run
+         */
+        Runnable r1 = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("線程任務A已確實執行......");
+            }
+        };
+        new Thread(r1).start();//聲明一線程對象，排程任務A，並啟動線程
+
+        Runnable r2 = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("線程任務B已確實執行......");
+            }
+        };
+        new Thread(r2).start();//聲明一線程對象，排程任務B，並啟動線程
+
+
+
+
     }
 }
 
-
+/**
+ * 抽象類範例
+ */
 abstract class Aoo {
     abstract void show();
 }

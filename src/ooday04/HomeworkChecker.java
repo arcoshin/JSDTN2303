@@ -243,8 +243,8 @@ class QuestionDatabase extends HomeworkCheckerTools{
      */
     public Question[] downloadQuestion() {
         Question[] data = new Question[2];//<<---------------------------------手動修改
-        data[0] = new Question(1, "", "");
-        data[1] = new Question(2, "", "");
+        data[0] = new Question(1, "動物類相關練習", "多態應用");
+        data[1] = new Question(2, "匿名內部類練習", "創建兩個匿名內部類對象");
 //        data[2] = new Question(3, "", "");
 //        data[3] = new Question(4, "", "");
 //        data[4] = new Question(5, "", "");
@@ -262,7 +262,10 @@ class QuestionDatabase extends HomeworkCheckerTools{
     public static void question1() throws InterruptedException {
         waitForPreparing();
         //=======================================================
-
+        System.out.println("以下為您展示類代碼......");
+        System.out.println(
+                ""
+        );
         //=======================================================
         backToMenu();
     }

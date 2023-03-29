@@ -27,21 +27,21 @@ class AnimalDemo {
             /**
              * 若要訪問特有數據 : 現在可以使用instanceof確認類型是否匹配，如是則向下轉型(強制轉換)為所匹配類型，即可調用特有屬性
              */
-            Feeder feeder = new Feeder();
-            if (animals[i] instanceof Dog) {//與Dog類型匹配
+            Master master = new Master();
+            if (animals[i] instanceof Dog) {//與Dog類型匹配時
                 ((Dog) animals[i]).lookHome();//強轉後調用狗類特有方法
                 //((Dog) animals[i]).swim();//強轉後調用狗類接口方法---------------------------但是代碼冗餘
-                feeder.feed(animals[i]);//餵養動物方法的形參限定動物類 : 此處可發現調用方法傳參時，系統可以自動向上造型(自動類型轉換)
+                master.feed(animals[i]);//餵養動物方法的形參限定動物類 : 此處可發現調用方法傳參時，系統可以自動向上造型(自動類型轉換)
             }
 
-            if (animals[i] instanceof Chick) {//與Chick類型匹類
+            if (animals[i] instanceof Chick) {//與Chick類型匹類時
                 ((Chick) animals[i]).layEgg();//強轉後調用雞類特有方法
-                feeder.feed(animals[i]);//餵養動物方法的形參限定動物類 : 此處可發現調用方法傳參時，系統可以自動向上造型(自動類型轉換)
+                master.feed(animals[i]);//餵養動物方法的形參限定動物類 : 此處可發現調用方法傳參時，系統可以自動向上造型(自動類型轉換)
             }
 
-            if (animals[i] instanceof Fish) {//與Fish類型匹類
+            if (animals[i] instanceof Fish) {//與Fish類型匹類時
                 //((Fish) animals[i]).swim();//強轉後調用魚類接口方法---------------------------但是代碼冗餘
-                feeder.feed(animals[i]);//餵養動物方法的形參限定動物類 : 此處可發現調用方法傳參時，系統可以自動向上造型(自動類型轉換)
+                master.feed(animals[i]);//餵養動物方法的形參限定動物類 : 此處可發現調用方法傳參時，系統可以自動向上造型(自動類型轉換)
             }
 
             /**
@@ -50,6 +50,10 @@ class AnimalDemo {
             if (animals[i] instanceof Swim) {//適用於所有實現Swim接口的類
                 ((Swim) animals[i]).swim();//以多態的概念解決代碼冗與
             }
+
+            /**
+             * 大師心得 : 代碼能父類絕不子類，大範圍的複用性、兼容性以及養護性都較高
+             */
         }
     }
 }

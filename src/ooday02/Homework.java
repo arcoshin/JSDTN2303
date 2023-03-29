@@ -1,14 +1,12 @@
 package ooday02;
 
-import java.awt.*;
-
 /**
  * 作業測試類 : Homework
  * <p>
  * Trans----------------------------
  * Person -> Human 類
  * Student -> Learner 類
- * Teacher -> Feeder 類
+ * Teacher -> Master 類
  * Doctor -> Surgeon 類
  * <p>
  * Animal -> LivingCreature 類
