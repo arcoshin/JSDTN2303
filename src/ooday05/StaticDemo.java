@@ -28,5 +28,7 @@ public class StaticDemo {
         StaticBlock s2 = new StaticBlock();
         StaticBlock s3 = new StaticBlock();
 
+        System.out.println(s1);
+
     }
 }
