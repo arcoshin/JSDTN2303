@@ -32,7 +32,7 @@ public class AnonInnerClassDemo {
         /**
          * 匿名內部類時，系統自動完成了兩件事
          * 1)."創建了Aoo的派生類"，但是該類沒有名字!
-         * 2).為該派稱類創造了一個對象，名為o2，並且"向上轉型為Aoo類型!"
+         * 2).為該派生類創造了一個對象，名為o2，並且"向上造型為Aoo類型!"
          * 3).大括號中的內容為派生類的類體
          */
         Aoo o2 = new Aoo() {//匿名內部類
@@ -60,25 +60,20 @@ public class AnonInnerClassDemo {
 
         /**
          * 接口的匿名內部類 :
-         * 直接以線程任務類為例，並重寫執行體run
          */
-        Runnable r1 = new Runnable() {
+        Inter i1 = new Inter() {
             @Override
-            public void run() {
-                System.out.println("線程任務A已確實執行......");
+            public void test() {
+                System.out.println("已成功調用i1重寫後的test方法");
             }
         };
-        new Thread(r1).start();//聲明一線程對象，排程任務A，並啟動線程
 
-        Runnable r2 = new Runnable() {
+        Inter i2 = new Inter() {
             @Override
-            public void run() {
-                System.out.println("線程任務B已確實執行......");
+            public void test() {
+                System.out.println("已成功調用i2重寫後的test方法");
             }
         };
-        new Thread(r2).start();//聲明一線程對象，排程任務B，並啟動線程
-
-
 
 
     }
@@ -89,4 +84,11 @@ public class AnonInnerClassDemo {
  */
 abstract class Aoo {
     abstract void show();
+}
+
+/**
+ * 接口範例
+ */
+interface Inter {
+    void test();
 }

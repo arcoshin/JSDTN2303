@@ -262,10 +262,264 @@ class QuestionDatabase extends HomeworkCheckerTools{
     public static void question1() throws InterruptedException {
         waitForPreparing();
         //=======================================================
-        System.out.println("以下為您展示類代碼......");
+        System.out.println("以下為您展示代碼===========================================================");
         System.out.println(
-                ""
+                        "/**\n" +
+                        " * 動物們的父類---動物類\n" +
+                        " */\n" +
+                        "abstract class Animal {\n" +
+                        "    /**\n" +
+                        "     * 共有屬性\n" +
+                        "     */\n" +
+                        "    String name;\n" +
+                        "    int age;\n" +
+                        "    String color;\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 構造器\n" +
+                        "     */\n" +
+                        "    Animal(String name, int age, String color) {\n" +
+                        "        this.name = name;\n" +
+                        "        this.age = age;\n" +
+                        "        this.color = color;\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 共有方法\n" +
+                        "     */\n" +
+                        "    void drink() {\n" +
+                        "        System.out.println(color + \"色\" + age + \"歲的\" + name + \"正在喝水......\");\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 抽象方法\n" +
+                        "     */\n" +
+                        "    abstract void eat();\n" +
+                        "}\n" +
+                        "\n" +
+                        "/**\n" +
+                        " * 狗類\n" +
+                        " */\n" +
+                        "class Dog extends Animal implements Swim {\n" +
+                        "    /**\n" +
+                        "     * 子類構造 : super()調用父類有參構造器\n" +
+                        "     */\n" +
+                        "    Dog(String name, int age, String color) {\n" +
+                        "        super(name, age, color);\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 特有方法\n" +
+                        "     */\n" +
+                        "    void lookHome() {\n" +
+                        "        System.out.println(color + \"色\" + age + \"歲的狗狗\" + name + \"正在看家......\");\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 重寫超類抽象方法\n" +
+                        "     */\n" +
+                        "    @Override\n" +
+                        "    void eat() {\n" +
+                        "        System.out.println(color + \"色\" + age + \"歲的狗狗\" + name + \"正在啃骨頭......\");\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 重寫接口中的方法 : 一律必須public\n" +
+                        "     */\n" +
+                        "    @Override\n" +
+                        "    public void swim() {\n" +
+                        "        System.out.println(color + \"色\" + age + \"歲的狗狗\" + name + \"正在游泳......\");\n" +
+                        "    }\n" +
+                        "}\n" +
+                        "\n" +
+                        "/**\n" +
+                        " * 雞類\n" +
+                        " */\n" +
+                        "class Chick extends Animal {\n" +
+                        "    /**\n" +
+                        "     * 子類構造 : super()調用父類有參構造器\n" +
+                        "     */\n" +
+                        "    Chick(String name, int age, String color) {\n" +
+                        "        super(name, age, color);\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 特有方法\n" +
+                        "     */\n" +
+                        "    void layEgg() {\n" +
+                        "        System.out.println(color + \"色\" + age + \"歲的小雞\" + name + \"正在下蛋呢......\");\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 重寫超類抽象方法\n" +
+                        "     */\n" +
+                        "    @Override\n" +
+                        "    void eat() {\n" +
+                        "        System.out.println(color + \"色\" + age + \"歲的小雞\" + name + \"正在吃小米......\");\n" +
+                        "    }\n" +
+                        "}\n" +
+                        "\n" +
+                        "/**\n" +
+                        " * 魚類\n" +
+                        " */\n" +
+                        "class Fish extends Animal implements Swim {\n" +
+                        "    /**\n" +
+                        "     * 子類構造 : super()調用父類有參構造器\n" +
+                        "     */\n" +
+                        "    Fish(String name, int age, String color) {\n" +
+                        "        super(name, age, color);\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 重寫超類抽象方法\n" +
+                        "     */\n" +
+                        "    @Override\n" +
+                        "    void eat() {\n" +
+                        "        System.out.println(color + \"色\" + age + \"歲的小魚兒\" + name + \"正在吃小蝦米......\");\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    /**\n" +
+                        "     * 重寫接口中的方法 : 一律必須public\n" +
+                        "     */\n" +
+                        "    @Override\n" +
+                        "    public void swim() {\n" +
+                        "        System.out.println(color + \"色\" + age + \"歲的小魚兒\" + name + \"正在游泳......\");\n" +
+                        "    }\n" +
+                        "}\n" +
+                        "\n" +
+                        "/**\n" +
+                        " * 游泳接口類\n" +
+                        " */\n" +
+                        "interface Swim {\n" +
+                        "    /**\n" +
+                        "     * 接口中已經默認所有方法結為\"抽象方法\"---故\"abstract\"為灰色\n" +
+                        "     * 看似普通方法，但接口中已經默認所有方法的前綴有\"abstract\"，意即實為抽象方法，不可有方法體\n" +
+                        "     */\n" +
+                        "    abstract void swim();\n" +
+                        "}\n" +
+                        "\n" +
+                        "/**\n" +
+                        " * 飼主類\n" +
+                        " */\n" +
+                        "class Master {\n" +
+                        "    /**\n" +
+                        "     * 餵動物的行為 ------可發現若傳參類型為子類，系統會自動向上造型\n" +
+                        "     */\n" +
+                        "    void feed(Animal animal) {\n" +
+                        "        animal.eat();\n" +
+                        "    }\n" +
+                        "//    /**\n" +
+                        "//     * 餵狗的行為\n" +
+                        "//     */\n" +
+                        "//    void feed(Dog dog) {\n" +
+                        "//        dog.eat();\n" +
+                        "//    }\n" +
+                        "//    /**\n" +
+                        "//     * 餵雞的行為\n" +
+                        "//     */\n" +
+                        "//    void feed(Chick chick) {\n" +
+                        "//        chick.eat();\n" +
+                        "//    }\n" +
+                        "//    /**\n" +
+                        "//     * 餵魚的行為\n" +
+                        "//     */\n" +
+                        "//    void feed(Fish fish) {\n" +
+                        "//        fish.eat();\n" +
+                        "//    }\n" +
+                        "}\n" +
+                        "\n" +
+                        "/**\n" +
+                        " * 多態演示類\n" +
+                        " */\n" +
+                        "class AnimalDemo {\n" +
+                        "    public static void main(String[] args) {\n" +
+                        "        //聲明Animal型數組animals，包含三個Dog型元素，三個Chick型元素，兩個Fish型元素------向上造型(自動類型轉換)\n" +
+                        "        Animal[] animals = new Animal[3 + 3 + 2];\n" +
+                        "        for (int i = 0; i < animals.length; i++) {\n" +
+                        "            animals[0] = new Dog(\"小黑\", 1, \"黑\");\n" +
+                        "            animals[1] = new Dog(\"小黃\", 1, \"黃\");\n" +
+                        "            animals[2] = new Dog(\"小白\", 1, \"白\");\n" +
+                        "            animals[3] = new Chick(\"小黑\", 1, \"黑\");\n" +
+                        "            animals[4] = new Chick(\"小白\", 1, \"白\");\n" +
+                        "            animals[5] = new Chick(\"小黃\", 1, \"黃\");\n" +
+                        "            animals[6] = new Fish(\"小黑\", 1, \"黑\");\n" +
+                        "            animals[7] = new Fish(\"小白\", 1, \"白\");\n" +
+                        "\n" +
+                        "            /**\n" +
+                        "             * 訪問屬性與方法時，是由該對象目前的類型決定 : 目前全部向上造型(自動類型轉換)為Animal型\n" +
+                        "             */\n" +
+                        "            System.out.println(animals[i].name);//輸出每隻動物的名字\n" +
+                        "            animals[i].eat();//每隻動物吃飯\n" +
+                        "            animals[i].drink();//每隻動物喝水\n" +
+                        "\n" +
+                        "            /**\n" +
+                        "             * 若要訪問特有數據 : 現在可以使用instanceof確認類型是否匹配，如是則向下轉型(強制轉換)為所匹配類型，即可調用特有屬性\n" +
+                        "             */\n" +
+                        "            Master master = new Master();\n" +
+                        "            if (animals[i] instanceof Dog) {//與Dog類型匹配時\n" +
+                        "                ((Dog) animals[i]).lookHome();//強轉後調用狗類特有方法\n" +
+                        "//  冗餘              //((Dog) animals[i]).swim();//強轉後調用狗類接口方法---------------------------但是代碼冗餘\n" +
+                        "                master.feed(animals[i]);//餵養動物方法的形參限定動物類 : 此處可發現調用方法傳參時，系統可以自動向上造型(自動類型轉換)\n" +
+                        "            }\n" +
+                        "\n" +
+                        "            if (animals[i] instanceof Chick) {//與Chick類型匹類時\n" +
+                        "                ((Chick) animals[i]).layEgg();//強轉後調用雞類特有方法\n" +
+                        "                master.feed(animals[i]);//餵養動物方法的形參限定動物類 : 此處可發現調用方法傳參時，系統可以自動向上造型(自動類型轉換)\n" +
+                        "            }\n" +
+                        "\n" +
+                        "//  冗餘          if (animals[i] instanceof Fish) {//與Fish類型匹類時\n" +
+                        "//  冗餘              //((Fish) animals[i]).swim();//強轉後調用魚類接口方法---------------------------但是代碼冗餘\n" +
+                        "//  冗餘              master.feed(animals[i]);//餵養動物方法的形參限定動物類 : 此處可發現調用方法傳參時，系統可以自動向上造型(自動類型轉換)\n" +
+                        "//  冗餘          }\n" +
+                        "\n" +
+                        "            /**\n" +
+                        "             * 解決代碼冗餘 : 游泳接口為重複，以多態的概念強轉後調用，可以有效解決代碼冗餘問題(可讀性、擴展性都更好)\n" +
+                        "             */\n" +
+                        "            if (animals[i] instanceof Swim) {//適用於所有實現Swim接口的類\n" +
+                        "                ((Swim) animals[i]).swim();//以多態的概念解決代碼冗與\n" +
+                        "            }\n" +
+                        "\n" +
+                        "            /**\n" +
+                        "             * 大師心得 : 代碼能父類絕不子類，大範圍的複用性、兼容性以及養護性都較高\n" +
+                        "             */\n" +
+                        "        }\n" +
+                        "    }\n" +
+                        "}"
         );
+        System.out.println("以下為您展示運行結果.=======================================================");
+        //背景代碼存放區開始=========================================================================================
+        //聲明Animal型數組animals，包含三個Dog型元素，三個Chick型元素，兩個Fish型元素------向上造型(自動類型轉換)
+        Animal[] animals = new Animal[3 + 3 + 2];
+        for (int i = 0; i < animals.length; i++) {
+            animals[0] = new Dog("小黑", 1, "黑");
+            animals[1] = new Dog("小黃", 1, "黃");
+            animals[2] = new Dog("小白", 1, "白");
+            animals[3] = new Chick("小黑", 1, "黑");
+            animals[4] = new Chick("小白", 1, "白");
+            animals[5] = new Chick("小黃", 1, "黃");
+            animals[6] = new Fish("小黑", 1, "黑");
+            animals[7] = new Fish("小白", 1, "白");
+
+            System.out.println(animals[i].name);//輸出每隻動物的名字
+            animals[i].eat();//每隻動物吃飯
+            animals[i].drink();//每隻動物喝水
+
+            Master master = new Master();
+            if (animals[i] instanceof Dog) {//與Dog類型匹配時
+                ((Dog) animals[i]).lookHome();//強轉後調用狗類特有方法
+                master.feed(animals[i]);//餵養動物方法的形參限定動物類 : 此處可發現調用方法傳參時，系統可以自動向上造型(自動類型轉換)
+            }
+
+            if (animals[i] instanceof Chick) {//與Chick類型匹類時
+                ((Chick) animals[i]).layEgg();//強轉後調用雞類特有方法
+                master.feed(animals[i]);//餵養動物方法的形參限定動物類 : 此處可發現調用方法傳參時，系統可以自動向上造型(自動類型轉換)
+            }
+
+            if (animals[i] instanceof Swim) {//適用於所有實現Swim接口的類
+                ((Swim) animals[i]).swim();//以多態的概念解決代碼冗與
+            }
+        }
+        //背景代碼存放區結束=========================================================================================
         //=======================================================
         backToMenu();
     }
@@ -276,9 +530,152 @@ class QuestionDatabase extends HomeworkCheckerTools{
     public static void question2() throws InterruptedException {
         waitForPreparing();
         //=======================================================
+        System.out.println("以下為您展示代碼===========================================================");
+        System.out.println(
+                        "/**\n" +
+                        " * 匿名內部類的演示類 : 應用率高，要重點掌握!!!\n" +
+                        " * 特別重點:\n" +
+                        " *\n" +
+                        " * 1.若想創建一派生類對象，且該對象只創建一次，則推薦使用，可以大幅簡化代碼\n" +
+                        " *\n" +
+                        " * 2.匿名內部類不可以修改外面局部變量的值\n" +
+                        " *\n" +
+                        " * 3.面試題 : 匿名內部類有獨立的class文件嗎? (字節碼文件)  答 : 有!!!所有內部類都有!\n" +
+                        " * 在專案資料夾/out資料夾/當前文件所在包位置/可以發現 : 外部類名 + $ + 內部類名(此處匿名內部類則為1,2,3,4).class文件即是\n" +
+                        " */\n" +
+                        "public class AnonInnerClassDemo {\n" +
+                        "    public static void main(String[] args) {\n" +
+                        "        /**\n" +
+                        "         * 匿名內部類時，系統自動完成了兩件事\n" +
+                        "         * 1).\"創建了Aoo的派生類\"，但是該類沒有名字!\n" +
+                        "         * 2).為該派生類創造了一個對象，名為o1，並且\"向上造型為Aoo類型!\"\n" +
+                        "         * 3).大括號中的內容為派生類的類體\n" +
+                        "         */\n" +
+                        "        Aoo o1 = new Aoo() {//匿名內部類\n" +
+                        "            /**\n" +
+                        "             * 既是派生類(子類)，則超類(父類)中的抽象方法必須重寫完整\n" +
+                        "             */\n" +
+                        "            @Override\n" +
+                        "            void show() {\n" +
+                        "                System.out.println(\"此處已成功執行抽象類Aoo的子類對象，o1的show()的方法...\");\n" +
+                        "            }\n" +
+                        "        };\n" +
+                        "\n" +
+                        "        /**\n" +
+                        "         * 匿名內部類時，系統自動完成了兩件事\n" +
+                        "         * 1).\"創建了Aoo的派生類\"，但是該類沒有名字!\n" +
+                        "         * 2).為該派稱類創造了一個對象，名為o2，並且\"向上轉型為Aoo類型!\"\n" +
+                        "         * 3).大括號中的內容為派生類的類體\n" +
+                        "         */\n" +
+                        "        Aoo o2 = new Aoo() {//匿名內部類\n" +
+                        "            /**\n" +
+                        "             * 既是派生類(子類)，則超類(父類)中的抽象方法必須重寫完整\n" +
+                        "             */\n" +
+                        "            @Override\n" +
+                        "            void show() {\n" +
+                        "                System.out.println(\"此處已成功執行抽象類Aoo的子類對象，o2的show()的方法...\");\n" +
+                        "            }\n" +
+                        "        };\n" +
+                        "\n" +
+                        "        /**\n" +
+                        "         * 可以生成非常多次的 new Aoo(){}\n" +
+                        "         * 但本質上是產生Aoo無數個新的派生類然後再創建該類對象\n" +
+                        "         * 因此o1,o2...等匿名內部類對象之間，其實並沒有關係!!!!!\n" +
+                        "         * 另外要特別注意 : 匿名內部類不可以修改外部成員變量的值!!!!!!\n" +
+                        "         */\n" +
+                        "\n" +
+                        "        /**\n" +
+                        "         * 調用匿名內部類的資源，則直接使用該派生類的對象調用即可\n" +
+                        "         */\n" +
+                        "        o1.show();\n" +
+                        "        o2.show();\n" +
+                        "\n" +
+                        "        /**\n" +
+                        "         * 接口的匿名內部類 :\n" +
+                        "         * 直接以線程任務類為例，並重寫執行體run\n" +
+                        "         */\n" +
+                        "        Runnable r1 = new Runnable() {\n" +
+                        "            @Override\n" +
+                        "            public void run() {\n" +
+                        "                System.out.println(\"線程任務A已確實執行......\");\n" +
+                        "            }\n" +
+                        "        };\n" +
+                        "        new Thread(r1).start();//聲明一線程對象，排程任務A，並啟動線程\n" +
+                        "\n" +
+                        "        Runnable r2 = new Runnable() {\n" +
+                        "            @Override\n" +
+                        "            public void run() {\n" +
+                        "                System.out.println(\"線程任務B已確實執行......\");\n" +
+                        "            }\n" +
+                        "        };\n" +
+                        "        new Thread(r2).start();//聲明一線程對象，排程任務B，並啟動線程\n" +
+                        "    }\n" +
+                        "}\n" +
+                        "\n" +
+                        "/**\n" +
+                        " * 抽象類範例\n" +
+                        " */\n" +
+                        "abstract class Aoo {\n" +
+                        "    abstract void show();\n" +
+                        "}\n"
+        );
+        System.out.println("以下為您展示運行結果.=======================================================");
+        //背景代碼存放區開始=========================================================================================
+        Aoo o1 = new Aoo() {//匿名內部類
+            @Override
+            void show() {
+                System.out.println("此處已成功執行抽象類Aoo的子類對象，o1的show()的方法...");
+            }
+        };
 
+        Aoo o2 = new Aoo() {//匿名內部類
+            /**
+             * 既是派生類(子類)，則超類(父類)中的抽象方法必須重寫完整
+             */
+            @Override
+            void show() {
+                System.out.println("此處已成功執行抽象類Aoo的子類對象，o2的show()的方法...");
+            }
+        };
+
+        /**
+         * 調用匿名內部類的資源
+         */
+        o1.show();
+        o2.show();
+
+        /**
+         * 接口的匿名內部類 :
+         */
+        Runnable r1 = new Runnable() {//實現一線程任務接口
+            @Override
+            public void run() {
+                System.out.println("線程任務A已確實執行......");
+            }
+        };
+        new Thread(r1).start();//聲明一線程對象，排程任務A，並啟動線程
+
+        Runnable r2 = new Runnable() {//實現一線程任務接口
+            @Override
+            public void run() {
+                System.out.println("線程任務B已確實執行......");
+            }
+        };
+        new Thread(r2).start();//聲明一線程對象，排程任務B，並啟動線程
+
+        //背景代碼存放區結束=========================================================================================
         //=======================================================
-        backToMenu();
+        Runnable r3 = new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    backToMenu();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        new Thread(r3).start();//聲明一線程對象，排程回到主頁的程序，並啟動線程
     }
 
     /**
