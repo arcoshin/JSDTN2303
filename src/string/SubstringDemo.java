@@ -1,7 +1,5 @@
 package string;
 
-import java.util.Arrays;
-
 /**
  * String substring(int begin,int end):擷取字符串中下標begin到end位置的元素，以字符串返回(含頭不含尾)
  * 如substring(3,8):表示擷取字符串中下標3~7的元素，並以一個新的字符串形式返回

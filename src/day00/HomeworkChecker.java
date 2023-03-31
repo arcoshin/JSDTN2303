@@ -6,9 +6,9 @@ import java.util.Scanner;
  * weekendHomework 2023.0X.XX
  * 作業類/周末作業類
  * HomeworkChecker.ver3.7
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
  * =====================
  * Update Information:
  * =====================
@@ -46,7 +46,7 @@ class HomeworkChecker extends HomeworkCheckerTools {
          * 進入選單主頁
          */
         showMenuTip(questionList);//選單主頁的輸入提示
-        showQuestionList(questionList,questionList.length);//遍歷所有題目
+        showQuestionList(questionList, questionList.length);//遍歷所有題目
 
 
         /**
@@ -55,14 +55,14 @@ class HomeworkChecker extends HomeworkCheckerTools {
         int checker = 0;
         try {
             checker = new Scanner(System.in).nextInt();//接收檢測者的選擇
-        } catch (Exception e) {
+        } catch (Exception e) {//保證任何異常都能繼續執行
 
         }
 
         /**
          * 作業查找分支系統
          */
-        whatUChooseFromMenu(checker,questionList);//將選擇派入選題分支
+        whatUChooseFromMenu(checker, questionList);//將選擇派入選題分支
 
         /**
          * 防止多重跳轉間重複執行本方法，添加return讓執行至此時，一定結束本次方法。
@@ -92,17 +92,17 @@ class Question {
     /**
      * 題目屬性
      */
-    int num;//題目序號
+    int questionNum;//題目序號
     String questionName;//題目名稱
     String questionContent;//題目要求內文
 
     /**
-     * @param num             題目序號
+     * @param questionNum             題目序號
      * @param questionName    題目名稱
      * @param questionContent 題目要求內文
      */
-    public Question(int num, String questionName, String questionContent) {
-        this.num = num;
+    public Question(int questionNum, String questionName, String questionContent) {
+        this.questionNum = questionNum;
         this.questionName = questionName;
         this.questionContent = questionContent;
     }
@@ -115,10 +115,11 @@ class HomeworkCheckerTools {
 
     /**
      * 主選單分支業務
-     * @param checker 跳轉目標的代碼
+     *
+     * @param checker      跳轉目標的代碼
      * @param questionList 跳轉目標的名稱
      */
-    protected static void whatUChooseFromMenu (int checker ,Question[] questionList) throws InterruptedException {
+    protected static void whatUChooseFromMenu(int checker, Question[] questionList) throws InterruptedException {
         if (checker == 99) {//選擇99則直接結束本方法
             return;
         } else if (checker > 0 && checker <= questionList.length) {//homeworkCheck != 99 but 10>=homeworkCheck>=max
@@ -131,7 +132,7 @@ class HomeworkCheckerTools {
             }
         } else {//others->Enter again!
             uRWrong();//錯了，重來
-            HomeworkChecker.homeworkChecker();
+            HomeworkChecker.homeworkChecker();//回選單重選
             return;
         }
     }
@@ -147,11 +148,14 @@ class HomeworkCheckerTools {
 
     /**
      * 遍歷所有題目的方法
+     *
      * @param max 本次開放題數
      */
-    protected static void showQuestionList(Question[] questionList ,int max) {
+    protected static void showQuestionList(Question[] questionList, int max) {
         for (int i = 0; i < HomeworkChecker.questionList.length; i++) {//遍歷題目列表
-            System.out.println(questionList[i].num + "." + questionList[i].questionName);
+            System.out.println(questionList[i].questionNum + "." + questionList[i].questionName);
+            System.out.println(questionList[i].questionContent);
+            System.out.println();
         }
     }
 
@@ -214,6 +218,20 @@ class HomeworkCheckerTools {
     }
 
     /**
+     * 預告即將為您展示代碼運行結果的方法
+     */
+    protected static void willShowURun() {
+        System.out.println("以下為您展示運行結果......");
+    }
+
+    /**
+     * 預告即將為您展示代碼運行結果的方法
+     */
+    protected static void willShowUCode() {
+        System.out.println("以下為您展示代碼......");
+    }
+
+    /**
      * 廣播說明客戶所選擇的業務
      */
     protected static void whatYouChoose(String doSomething) {
@@ -242,15 +260,15 @@ class HomeworkCheckerTools {
 /**
  * 資料庫類(尚須手動更新)
  */
-class QuestionDatabase extends HomeworkCheckerTools{
+class QuestionDatabase extends HomeworkCheckerTools {
     /**
      * 將題目存入並生成題目列表(data)的方法:QB->HWC
      */
     public Question[] downloadQuestion() {
-        Question[] data = new Question[0];//<<---------------------------------手動修改
+        Question[] data = new Question[3];//<<---------------------------------手動修改
         data[0] = new Question(1, "", "");
         data[1] = new Question(2, "", "");
-//        data[2] = new Question(3, "", "");
+        data[2] = new Question(3, "", "");
 //        data[3] = new Question(4, "", "");
 //        data[4] = new Question(5, "", "");
 //        data[5] = new Question(6, "", "");
@@ -267,8 +285,12 @@ class QuestionDatabase extends HomeworkCheckerTools{
     public static void question1() throws InterruptedException {
         waitForPreparing();
         //=======================================================
+        willShowUCode();
 
         //=======================================================
+        willShowURun();
+        //背景代碼存放區開始----------------------------------------
+        //背景代碼存放區結束----------------------------------------
         backToMenu();
     }
 
@@ -278,8 +300,12 @@ class QuestionDatabase extends HomeworkCheckerTools{
     public static void question2() throws InterruptedException {
         waitForPreparing();
         //=======================================================
+        willShowUCode();
 
         //=======================================================
+        willShowURun();
+        //背景代碼存放區開始----------------------------------------
+        //背景代碼存放區結束----------------------------------------
         backToMenu();
     }
 
@@ -289,8 +315,12 @@ class QuestionDatabase extends HomeworkCheckerTools{
     public static void question3() throws InterruptedException {
         waitForPreparing();
         //=======================================================
+        willShowUCode();
 
         //=======================================================
+        willShowURun();
+        //背景代碼存放區開始----------------------------------------
+        //背景代碼存放區結束----------------------------------------
         backToMenu();
     }
 
@@ -300,8 +330,12 @@ class QuestionDatabase extends HomeworkCheckerTools{
     public static void question4() throws InterruptedException {
         waitForPreparing();
         //=======================================================
+        willShowUCode();
 
         //=======================================================
+        willShowURun();
+        //背景代碼存放區開始----------------------------------------
+        //背景代碼存放區結束----------------------------------------
         backToMenu();
     }
 
@@ -311,8 +345,12 @@ class QuestionDatabase extends HomeworkCheckerTools{
     public static void question5() throws InterruptedException {
         waitForPreparing();
         //=======================================================
+        willShowUCode();
 
         //=======================================================
+        willShowURun();
+        //背景代碼存放區開始----------------------------------------
+        //背景代碼存放區結束----------------------------------------
         backToMenu();
     }
 
@@ -322,8 +360,12 @@ class QuestionDatabase extends HomeworkCheckerTools{
     public static void question6() throws InterruptedException {
         waitForPreparing();
         //=======================================================
+        willShowUCode();
 
         //=======================================================
+        willShowURun();
+        //背景代碼存放區開始----------------------------------------
+        //背景代碼存放區結束----------------------------------------
         backToMenu();
     }
 
@@ -333,8 +375,12 @@ class QuestionDatabase extends HomeworkCheckerTools{
     public static void question7() throws InterruptedException {
         waitForPreparing();
         //=======================================================
+        willShowUCode();
 
         //=======================================================
+        willShowURun();
+        //背景代碼存放區開始----------------------------------------
+        //背景代碼存放區結束----------------------------------------
         backToMenu();
     }
 
@@ -344,8 +390,12 @@ class QuestionDatabase extends HomeworkCheckerTools{
     public static void question8() throws InterruptedException {
         waitForPreparing();
         //=======================================================
+        willShowUCode();
 
         //=======================================================
+        willShowURun();
+        //背景代碼存放區開始----------------------------------------
+        //背景代碼存放區結束----------------------------------------
         backToMenu();
     }
 
@@ -355,8 +405,12 @@ class QuestionDatabase extends HomeworkCheckerTools{
     public static void question9() throws InterruptedException {
         waitForPreparing();
         //=======================================================
+        willShowUCode();
 
         //=======================================================
+        willShowURun();
+        //背景代碼存放區開始----------------------------------------
+        //背景代碼存放區結束----------------------------------------
         backToMenu();
     }
 
@@ -366,8 +420,12 @@ class QuestionDatabase extends HomeworkCheckerTools{
     public static void question10() throws InterruptedException {
         waitForPreparing();
         //=======================================================
+        willShowUCode();
 
         //=======================================================
+        willShowURun();
+        //背景代碼存放區開始----------------------------------------
+        //背景代碼存放區結束----------------------------------------
         backToMenu();
     }
 

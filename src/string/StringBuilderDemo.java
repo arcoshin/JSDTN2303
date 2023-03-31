@@ -16,7 +16,7 @@ public class StringBuilderDemo {
         System.out.println(str2);
 
         String str = "好好學習Java";
-        //String -> StringBuilder : 利於頻繁編輯
+        //String -> StringBuilder : 利於頻繁修改
         StringBuilder builder = new StringBuilder(str);
 
         /**
@@ -28,14 +28,30 @@ public class StringBuilderDemo {
          */
         builder.append("，為了找份好工作!");
         System.out.println(builder);//好好學習Java，為了找份好工作!
+        //                            0.00.0.00000.01.11.1.11.1 下
+        //                            0.12.3.45678.90.12.3.45.6 標
 
         /**
          * replace(int start,int end,String str)替換指定位置的內容
          */
-        builder.replace(9,16,"就是為了改變世界");//下標一樣含頭不含尾
+        builder.replace(9, 16, "就是為了改變世界");//下標一樣含頭不含尾(實際取代9~15)
         System.out.println(builder);//好好學習Java，就是為了改變世界!
+        //                            0.00.0.00000.01.11.1.11.11 下
+        //                            0.12.3.45678.90.12.3.45.67 標
 
+        /**
+         * delete(int start,int end)刪除指定位置的內容
+         */
+        builder.delete(0,8);//下標一樣含頭不含尾(實際刪除0~7)
+        System.out.println(builder);//，就是為了改變世界!
+        //                            0.0 0.00.00.00.0 下
+        //                            0.1 2.34.56.78.9 標
 
+        /**
+         * insert(int start,String str)從指定位置插入內容
+         */
+        builder.insert(0,"活著");
+        System.out.println(builder);//活著，就是為了改變世界
 
     }
 }
