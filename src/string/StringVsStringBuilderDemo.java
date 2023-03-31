@@ -1,7 +1,7 @@
 package string;
 
 
-public class StringStringBuilderDemo {
+public class StringVsStringBuilderDemo {
     public static void main(String[] args) {
         /**
          * 由於String是不可變變量，每次修改都是創建新對象重新引用
