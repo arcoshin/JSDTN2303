@@ -9,11 +9,17 @@ package string;
  */
 public class TrimDemo {
     public static void main(String[] args) {
-        String name1 = "                Tom    ";
-        String s1 = name1.trim();//接收修改過的新字符串對象
+        /**
+         * 消除字符串頭尾空白字符
+         */
+        String tom = "                  Tom    ";
+        String s1 = tom.trim();//接收修改後的新字符串對象
         System.out.println(s1);//Tom
 
-        String name2 = "" +
+        /**
+         * 消除字符串頭尾空白字符 : 包含空白符、迴車符、換行符
+         */
+        String jerry = "" +
                 "" +
                 "" +
                 "" +
@@ -25,6 +31,13 @@ public class TrimDemo {
                 "" +
                 "" +
                 "";
-        System.out.println(name2.trim());//Jerry
+        System.out.println(jerry.trim());//Jerry
+
+        /**
+         * 消除字符串頭尾空白字符 : 包含空白符、迴車符、換行符
+         * 但不會相除非空白字符之間的元素
+         */
+        String something = "   . Something ,     ";
+        System.out.println(something.trim());//. Something ,
     }
 }
