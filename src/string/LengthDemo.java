@@ -9,6 +9,5 @@ public class LengthDemo {
         String str = "JAVA !";
         int length = str.length();//獲取str數組的長度
         System.out.println(length);//6，空格也算
-
     }
 }
