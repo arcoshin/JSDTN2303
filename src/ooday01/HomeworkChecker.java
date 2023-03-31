@@ -1,7 +1,5 @@
 package ooday01;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Scanner;
 
 /**

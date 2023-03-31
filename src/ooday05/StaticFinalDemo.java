@@ -3,7 +3,7 @@ package ooday05;
 /**
  * 常量演示類
  */
-public class StaticFinalDemo {
+class StaticFinalDemo {
     public static void main(String[] args) {
         System.out.println(Loo.PI);//常量具備static修飾，屬於靜態資源，也是透過類名調用
     }

@@ -52,7 +52,12 @@ class HomeworkChecker extends HomeworkCheckerTools {
         /**
          * 聲明scanner對象接收檢測員輸入的選擇
          */
-        int checker = new Scanner(System.in).nextInt();//接收檢測者的選擇
+        int checker = 0;
+        try {
+            checker = new Scanner(System.in).nextInt();//接收檢測者的選擇
+        } catch (Exception e) {
+
+        }
 
         /**
          * 作業查找分支系統
@@ -242,7 +247,7 @@ class QuestionDatabase extends HomeworkCheckerTools{
      * 將題目存入並生成題目列表(data)的方法:QB->HWC
      */
     public Question[] downloadQuestion() {
-        Question[] data = new Question[2];//<<---------------------------------手動修改
+        Question[] data = new Question[0];//<<---------------------------------手動修改
         data[0] = new Question(1, "", "");
         data[1] = new Question(2, "", "");
 //        data[2] = new Question(3, "", "");
