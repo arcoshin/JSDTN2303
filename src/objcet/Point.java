@@ -1,11 +1,21 @@
 package objcet;
 
+import java.util.Objects;
+
 /**
  * 點類
+ * <p>
+ * 補充: 標準的javaBean
+ * 1.)屬性私有化
+ * 2.)屬性可以透過方法修改或查詢(Get&Set)
+ * 3.)至少有一個無參構造方法
  */
 public class Point {
     private int x;
     private int y;
+
+    public Point() {
+    }
 
     public Point(int x, int y) {
         this.x = x;
@@ -35,4 +45,20 @@ public class Point {
                 ", y=" + y +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Point point = (Point) o;
+        return x == point.x &&
+                y == point.y;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
+    }
+
+
 }
