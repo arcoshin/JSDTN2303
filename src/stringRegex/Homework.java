@@ -2,10 +2,6 @@ package stringRegex;
 
 
 import objcet.*;
-import objcet.Aoo;
-import objcet.Boo;
-import objcet.Coo;
-import objcet.Loo;
 
 import java.util.Arrays;
 
