@@ -25,6 +25,7 @@ public class MatchesDemo {
             System.out.println("信箱格式正確");
         } else {
             System.out.println("輸入格式錯誤");
+            return;
         }
 
     }
