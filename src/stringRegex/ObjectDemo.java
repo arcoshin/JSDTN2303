@@ -1,4 +1,6 @@
-package objcet;
+package stringRegex;
+
+import objcet.Point;
 
 /**
  * 萬類之祖 :　Object是所有類的頂級父類(直接或間接繼承)
@@ -72,7 +74,7 @@ public class ObjectDemo {
 
         StringBuilder builder1 = new StringBuilder(string);
         StringBuilder builder2 = new StringBuilder(string);
-        System.out.println("builder1 == builder2 ? " + (builder1 == builder2));////false，已知兩者內存地址必不相同(new)
+        System.out.println("builder1 == builder2 ? " + (builder1 == builder2));//false，已知兩者內存地址必不相同(new)
         System.out.println("builder1.equals(builder2) ? " + builder1.equals(builder2));//StringBuilder類沒有重寫equals()方法
 
 
@@ -81,18 +83,18 @@ public class ObjectDemo {
 
 }
 
-public class Aoo {
+class Aoo {
 
 }
 
-public class Boo extends Aoo {
+class Boo extends Aoo {
 
 }
 
-public class Coo extends Boo implements Loo {
+class Coo extends Boo implements Loo {
 
 }
 
-public interface Loo {
+interface Loo {
 
 }
