@@ -6,7 +6,7 @@ package objcet;
  * <p>
  * ===>Object類中定義的方法可以在任何類中使用<===但是，基本類型不是類!!
  */
-public class ObjectDemo {
+class ObjectDemo {
     public static void main(String[] args) {
         /**
          * 每個類最少都會有"本身"或者"Object"兩種類型的多態
@@ -72,7 +72,7 @@ public class ObjectDemo {
 
         StringBuilder builder1 = new StringBuilder(string);
         StringBuilder builder2 = new StringBuilder(string);
-        System.out.println("builder1 == builder2 ? " + (builder1 == builder2));////false，已知兩者內存地址必不相同(new)
+        System.out.println("builder1 == builder2 ? " + (builder1 == builder2));//false，已知兩者內存地址必不相同(new)
         System.out.println("builder1.equals(builder2) ? " + builder1.equals(builder2));//StringBuilder類沒有重寫equals()方法
 
 
@@ -81,18 +81,18 @@ public class ObjectDemo {
 
 }
 
-public class Aoo {
+class Aoo {
 
 }
 
-public class Boo extends Aoo {
+class Boo extends Aoo {
 
 }
 
-public class Coo extends Boo implements Loo {
+class Coo extends Boo implements Loo {
 
 }
 
-public interface Loo {
+interface Loo {
 
 }

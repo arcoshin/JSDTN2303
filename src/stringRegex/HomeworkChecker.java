@@ -1,14 +1,13 @@
 package stringRegex;
 
-import objcet.*;
-
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
- * weekendHomework 2023.0X.XX
- * 作業類/周末作業類
- * HomeworkChecker.ver3.7
+ * weekendHomework 2023.04.01
+ * String、Regex、包裝類練習作業類
+ * HomeworkChecker.ver3.8
  * <p>
  * <p>
  * <p>
@@ -32,7 +31,7 @@ import java.util.Scanner;
  * 4.Whether if building a "KeyAdapter" system to replace some Scanners ?
  * <p>
  * <p>
- * 20230328_XCX
+ * 20230401_XCX
  */
 class HomeworkChecker extends HomeworkCheckerTools {
     /**
@@ -269,7 +268,7 @@ class QuestionDatabase extends HomeworkCheckerTools {
      */
     public Question[] downloadQuestion() {
         Question[] data = new Question[3];//<<---------------------------------手動修改
-        data[0] = new Question(1, "String about Regex", "String類型中支持正則表達式的相關方法");
+        data[0] = new Question(1, "StringAPI about Regex", "String類型中支持正則表達式的相關方法");
         data[1] = new Question(2, "Object類", "設計Point類，重寫toString&equals");
         data[2] = new Question(3, "包裝類", "相關轉換、自動拆裝箱及常見的兩個應用");
 //        data[3] = new Question(4, "", "");
@@ -941,6 +940,84 @@ class QuestionDatabase extends HomeworkCheckerTools {
         //背景代碼存放區開始----------------------------------------
         //背景代碼存放區結束----------------------------------------
         backToMenu();
+    }
+
+
+    /**
+     * 點類
+     */
+    private static class Point {
+        private int x;
+        private int y;
+
+        public Point() {
+        }
+
+        public Point(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        public int getX() {
+            return x;
+        }
+
+        public void setX(int x) {
+            this.x = x;
+        }
+
+        public int getY() {
+            return y;
+        }
+
+        public void setY(int y) {
+            this.y = y;
+        }
+
+        @Override
+        public String toString() {
+            return "Point{" +
+                    "x=" + x +
+                    ", y=" + y +
+                    '}';
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Point point = (Point) o;
+            return x == point.x &&
+                    y == point.y;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(x, y);
+        }
+    }
+
+    /**
+     * 萬類之祖 :　Object是所有類的頂級父類(直接或間接繼承)
+     */
+    private class ObjectDemo {
+
+    }
+
+    static class Aoo {
+
+    }
+
+    static class Boo extends Aoo {
+
+    }
+
+    static class Coo extends Boo implements Loo {
+
+    }
+
+    interface Loo {
+
     }
 
 }

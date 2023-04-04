@@ -3,7 +3,7 @@ package objcet;
 /**
  * Integer(int的包裝類) 適用所有包裝類
  */
-public class IntegerDemo {
+class IntegerDemo {
     public static void main(String[] args) {
         /**
          * 基本類型 ---打包--> 包裝類型 : 包裝類名.valueOf
