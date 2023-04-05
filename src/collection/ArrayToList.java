@@ -2,7 +2,6 @@ package collection;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -22,6 +21,7 @@ public class ArrayToList {
          * 生成新的集合，於構造器ArrayList()中傳入list(new一個新的地址)
          *
          * 2).
+         * 創建一個新集合，使用addAll()，將整個集合加入
          */
         List<String> list = Arrays.asList(array);
         list.set(0, "1");

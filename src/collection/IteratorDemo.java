@@ -50,7 +50,7 @@ public class IteratorDemo {
                 /**
                  * 注意 : 迭代過程中禁止對集合進行任何Collection提供的增刪操作方法，否則異常
                  * ConcurrentModificationException : 併發修改異常
-                 * 此時，只能若要滿足刪除需求，Iterator提供了remove()方法
+                 * 此時，若要滿足刪除需求，Iterator提供了實例方法remove()
                  */
 //                c.remove("#");
                 it.remove();//迭代器提供了remove方法協助移除
