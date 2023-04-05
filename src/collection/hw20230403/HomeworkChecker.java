@@ -1,13 +1,11 @@
 package collection.hw20230403;
 
-import collection.Point;
-
 import java.util.*;
 
 /**
- * weekendHomework 2023.0X.XX
- * 作業類/周末作業類
- * HomeworkChecker.ver3.7
+ * weekendHomework 2023.04.03
+ * Collection作業類/周末作業類
+ * HomeworkChecker.ver3.8
  * <p>
  * <p>
  * <p>
@@ -31,7 +29,7 @@ import java.util.*;
  * 4.Whether if building a "KeyAdapter" system to replace some Scanners ?
  * <p>
  * <p>
- * 20230328_XCX
+ * 20230405_XCX
  */
 class HomeworkChecker extends HomeworkCheckerTools {
     /**
